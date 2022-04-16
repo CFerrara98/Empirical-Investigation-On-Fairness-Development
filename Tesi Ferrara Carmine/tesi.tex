@@ -21,6 +21,10 @@
 % Invece per i PDF ho risolto così:
 % pdftk tesi.pdf background bozza.pdf output tesi_bozza.pdf
 %
+\newenvironment{nointerlinea}[1]{
+\begin{spacing}{#1}}
+{\end{spacing}
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   DOCUMENTO VERO E PROPRIO    %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -68,10 +72,10 @@
 %\part{Studio iniziale}
 % CAPITOLI
 \include{capitoli/introduzione}
+\include{capitoli/background}
 \include{capitoli/stato_arte}
 \include{capitoli/design}
 \include{capitoli/conclusioni}
-
 
 %\part{Impatto ambientale}
 
