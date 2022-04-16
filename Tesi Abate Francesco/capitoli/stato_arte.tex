@@ -1,0 +1,185 @@
+\chapter{Background} %\label{1cap:spinta_laterale}
+% [titolo ridotto se non ci dovesse stare] {titolo completo}
+%
+
+\section{Software Engineering}
+Software Engineering viene definita come una collezione di tecniche sistematiche per lo sviluppo del software, utilizzando un approccio ingegneristico. Tali tecniche sono frutto di ricerca e di lezioni apprese dopo anni di esperienza circa la programmazione \cite{mall2014fundamentals}. Nel corso della storia sono state definite una serie di best practice e di attività utili a garantire un certo livello di qualità nel software e a prevenire eventuali problematiche che si potrebbero riscontrare durante l'uso del software stesso.\\In particolare, le linee guida di Software Engineering regolano: l'attività di modellazione, durante la quale si progetta e si definisce il software stesso; l'attività di problem solving, durante la quale si cercano soluzioni ai problemi riscontrati; l'attività di knowledge acquisition, durante la quale si ottengono dati che verranno formalizzati in informazioni \cite{bruegge2009object}.\\
+Negli anni si è sentita sempre più la necessità di avere a disposizione tecniche e best practice al fine di costruire un buon software, funzionante e affidabile: un software caratterizzato da failure può comportare insoddisfazione nel cliente, il che si traduce in perdita economica influenzata dai costi di manutenzione che dovranno essere applicati per risolvere i problemi presentati \cite{bruegge2009object}. Negli anni '90, ad esempio, si cercò di realizzare un sistema di smistamento dei bagagli totalmente automatizzato per l'aeroporto internazionale di Denver: il progetto era decisamente ambizioso siccome automatizzando la gestione dei bagagli si valutava di poter far partire un nuovo volo in soli 30 minuti dall'ultimo atterraggio. Il progetto è, al giorno d'oggi, fallito per via di decisioni che hanno sottovalutato la complessità del sistema: il problema principale consisteva nell'errata previsione che vedeva la realizzazione dell'intero sistema in soli due anni. Visti i tempi ristretti, il team di sviluppo è stato costretto ad adottare particolari scorciatoie che hanno successivamente comportato altri problemi inerenti alla risoluzione di errori commessi dallo stesso team di sviluppo. La sottovalutazione del team di management ha comportato, quindi, ad un ritardo di 16 mesi nell'apertura dell'aeroporto, il che ha richiesto alla città di Denver una spesa di circa un milione di dollari ogni giorno per sostenere le spese riguardanti l'aeroporto vuoto e i prestiti edilizi. All'apertura è stato presentato un sistema decisamente incompleto: funzionava per un'unica corsia, rispetto alle tre corsie disponibili, per una singola compagnia aerea e solo per i voli di andata; per i restanti voli venivano comunque adoperate attrezzature manuali. In 10 anni di utilizzo il sistema non ha mai funzionato come dovrebbe, finché nel 2005 non si è decisi di dimetterlo e di abbandonarlo definitivamente rendendo futili le spese di manutenzione adoperate ogni mese, le quali ammontavano ad un milione di dollari in più ogni mese rispetto alle spese inerenti alla manutenzione delle attrezzature manuali \cite{denver}.\\
+È fondamentale, quindi, progettare accuratamente un sistema software onde ridurre le probabilità di fallimento di quest'ultimo. Un sistema ben progettato, infine, riduce la presenza di disservizi, i quali influirebbero negativamente sull'esperienza d'uso dell'utente finale.
+
+\section{Machine Learning}
+Oggigiorno il proprio computer viene utilizzato in molteplici campi, dall'intrattenimento al risolvere i propri problemi: per questa tipologia di utilizzo in particolare, il computer utilizza algoritmi che permettono di ricevere un input e produrre un output ben definito. Con il tempo, però, sono sorti diversi problemi per i quali l'applicazione di un algoritmo non è propriamente adatta: un esempio può essere il dover predire le vendite del successivo mese sulla base dei dati raccolti nei mesi precedenti \cite{alpaydin2020introduction}. In un caso del genere risulta essere infattibile produrre un algoritmo.\\
+Pertanto, si sente la necessità di dover fare in modo che il computer riesca, in qualche modo, a comprendere come effettuare la predizione: più in generale, il computer deve essere capace di risolvere particolari problematiche in autonomia \cite{helm2020machine}.\\
+Il Machine Learning viene oggigiorno utilizzato in svariati campi \cite{srivastava2019comparison}, tra cui:
+\begin{itemize}
+  \item Sport, per effettuare predizioni sul risultato di una partita, per predire le performance dei giocatori e delle squadre, per supporre strategie per le prossime partite, per predire il prezzo di cessione un giocatore, per comprendere quanto un giocatore è adatto alla sponsorizzazione di un particolare brand;
+  \item Robotica, per il riconoscimento di oggetti e ostacoli, per ottimizzare il modo in cui un task viene svolto;
+  \item Climatologia, per svolgere predizioni sulle future condizioni meteo, per anticipare eventuali calamità naturali;
+  \item E-commerce, per individuare pattern adatti a migliorare le vendite, per individuare il prezzo più adatto ad un articolo e i suoi potenziali acquirenti.
+\end{itemize}
+Il Machine Learning introduce, quindi, la capacità nel computer di imparare e comportarsi simulando l'intelligenza umana. In generale, si fa uso di grossi dataset per permettere al computer di apprendere e di riconoscere pattern in modo da poter prendere decisioni. Tali dataset sono caratterizzati dalle feature, le quali sono caratteristiche, attributi degli elementi (record) appartenenti al dataset \cite{helm2020machine}. Alcuni di questi attributi possono essere definiti \emph{sensibili} siccome potrebbero causare discriminazioni nelle predizioni dell'algoritmo. Alcuni di essi possono essere il sesso, la razza e l'età \cite{islam2021through}. Tutti i soggetti sottoposti a discriminazioni rientrano in un gruppo denominato \emph{protected group}; viceversa, tutti i soggetti non sottoposti a discriminazioni rientrano in un gruppo denominato \emph{unprotected group} \cite{ben2019protecting}.\\
+Inoltre, è bene sapere che la correttezza delle predizioni è misurata tramite particolari metriche \cite{verma2018fairness}:
+\begin{itemize}
+  \item \emph{True positive (TP)}, indica il caso in cui la predizione conferma il caso reale positivo;
+  \item \emph{False positive (FP)}, indica il caso in cui è stata effettuata una predizione positiva, ma la realtà è ben diversa;
+  \item \emph{False negative (FN)}, indica il caso in cui è stata effettuata una predizione negativa, ma la realtà è ben diversa;
+  \item \emph{True negative (TN)}, indica il caso in cui la predizione conferma il caso reale negativo.
+\end{itemize}
+Si ponga il caso in cui esista un algoritmo capace di effettuare predizioni sulla presenza di un tumore. Se l'algoritmo prevede che il tumore sia presente allora la predizione è detta \emph{positiva}; al contrario, la predizione è detta \emph{negativa}. Quest'ultima, in realtà, restituisce un valore probabilistico compreso tra 0 e 1: in base al valore ottenuto, la predizione viene classificata in una determinata classe che sarà positiva o negativa. Quando esistono solo due classi, come in questo caso, si parla di classificazione binaria; nulla vieta, però, la presenza di più classi (ad esempio, è possibile classificare un veicolo stradale tramite le classi "automobile", "motociclo", "autobus", "camion" e così via). Quando viene dedotta una classe \emph{C} in base al valore probabilistico della predizione, il soggetto in questione viene detto appartenente alla classe \emph{C} \cite{alpaydin2020introduction}. Ovviamente la predizione potrebbe essere errata, quindi diversa dal caso reale (il tumore è davvero presente?): da qui si comprende con quale delle metriche soprastanti si ha a che fare. Volendo fare un altro esempio, si consideri il caso in cui l'algoritmo predice la presenza di un tumore, quindi effettua una predizione positiva; si scopre, successivamente, che il tumore non è presente. In questo caso, si ha a che fare con un \emph{false positive} siccome la predizione positiva si è dimostrata diversa dal caso reale.
+
+\section{Software Engineering for Artificial Intelligence}
+Il Machine Learning è una branca dell'Artificial Intelligence che viene sempre più affiancata al mondo della Software Engineering.\\
+Inizialmente sono sempre state branche tra loro sviluppate in maniera separata, la cui ricerca trattava distintivamente: mentre nel mondo dell'Artificial Intelligence ci si concentrava sulla ricerca di approcci che permettevano alla macchina di percepire, ragionare ed eseguire, nel mondo della Software Engineering ci si concentrava sulla ricerca di tecniche che potessero migliorare e velocizzare lo sviluppo del software \cite{rech2004artificial}.\\
+Con il tempo, invece, sono stati individuati ambiti che riguardassero entrambe le discipline ai quali la ricerca si è interessata, in particolare la Requirements Engineering per sistemi intelligenti. Il termine "Requirements Engineering" è ampiamente utilizzato quando si parla di Software Engineering e denota le attività di raccolta, analisi, specifica, validazione, gestione e documentazione dei requisiti, svolte durante il ciclo di vita del software.
+Da qui sono stati individuati diversi processi della Software Engineering applicabili ai sistemi intelligenti: risoluzione dei problemi, testing, dependency management, monitoring e logging, stima dell'effort, data safety e così via \cite{belani2019requirements}.\\
+È opportuno sottolineare che i requisiti funzionali non sono l'unico ambito che accomuna entrambe le discipline. Sono di rilevante importanza anche i requisiti non funzionali, i quali permettono il rispetto di particolari vincoli qualitativi \cite{horkoff2019non}:
+\begin{itemize}
+  \item Accuratezza e performance: l'algoritmo deve essere accurato (la predizione deve corrispondere alla realtà) e performante;
+  \item Fairness: l'algoritmo deve essere "fair", cioè non devono essere compiute discriminazioni tramite le feature del dataset, come la razza e il genere;
+  \item Trasparenza: l'utente finale non sa come viene effettuata la predizione e ciò non deve, quanto possibile, mettere in dubbio l'affidabilità dell'algoritmo;
+  \item Sicurezza e privacy: tramite determinati protocolli deve essere garantita la privacy dei dati coinvolti nella computazione dell'algoritmo;
+  \item Testabilità: devono poter essere applicabili determinate strategie di testing;
+  \item Affidabilità: le predizioni effettuate devono essere quanto più realistiche possibile, al fine da poter considerare l'algoritmo affidabile.
+\end{itemize}
+
+\section{Fairness nei sistemi intelligenti}
+Come anticipato, uno degli scopi della Software Engineering è assicurare un certo livello di qualità nel software. Studi recenti, però, hanno dimostrato una nuova tipologia di difetti che fa capo a discriminazioni svolte dai sistemi intelligenti: difatti, ci sono stati casi in cui quest'ultimi hanno discriminato persone principalmente in base alla razza e al sesso \cite{brun2018software}.\\
+Alcuni episodi di discriminazione svolti dai sistemi intelligenti sono i seguenti:
+\begin{itemize}
+  \item Un algoritmo utilizzato da più di 200 milioni di persone negli ospedali statunitensi per predire quali pazienti avrebbero avuto la necessità di maggiori cure mediche arrivò a preferire pazienti bianchi rispetto a quelli neri per via dei costi spesi in cure da parte dei pazienti neri, i quali sono decisamente inferiori rispetto a quelli spesi per i bianchi. Per questo motivo, l'algoritmo considerava i pazienti neri come maggiormente in salute rispetto ai pazienti bianchi \cite{obermeyer2019dissecting};
+  \item La polizia statunitense utilizza un algoritmo per analizzare i dati e predire i crimini che potrebbero accadere in futuro per mano di un particolare pregiudicato. Il problema è che tale algoritmo aveva la tendenza a giudicare le persone di colore come maggiormente predisposte a compiere crimini, quindi rilevava maggiore rischio nel compiere crimini violenti \cite{biasblack2016propublica};
+  \item Nel 2015, Amazon realizzò che il software intelligente di cui faceva uso per filtrare i migliori candidati alle offerte di lavoro effettuava delle discriminazioni. Tale sistema fu addestrato su un gran numero di curriculum ottenuti in 10 anni: la maggior parte di essi provenivano da uomini, quindi il sistema arrivò a pensare che i candidati uomini fossero più adeguati alle posizioni inerenti al mondo della tecnologia. Tale problematica ha portato Amazon a chiudere il progetto, secondo le informazioni da loro fornite \cite{amazonrecruiting2018reuters};
+  \item Nel caso si carichi un video su YouTube e si visualizzano i sottotitoli generati in automatico, è probabile che siano più accurati quando a parlare è un uomo rispetto ad una donna. È stato riportato, però, che la generazione automatica dei sottotitoli non discrimina solo in base al sesso, bensì anche in base al dialetto, in particolare nelle lingue inglese e arabo \cite{tatman-2017-gender};
+  \item Diversi algoritmi di face recognition sbagliano il riconoscimento con maggiore probabilità se il soggetto è una donna, una persona nera e se la sua età rientra tra i 18 e i 30 anni \cite{klare2012face}.
+\end{itemize}
+Si osserva, quindi, che in ogni casistica si potrebbe dare una definizione diversa di fairness: proprio per questo, è decisamente complesso definirla. Infatti, la letteratura non propone un'unica definizione: ne sono state proposte diverse, le quali variano in base al problema di cui si parla \cite{islam2021through}. In generale, è necessario sapere che alcune di esse si rifanno al risultato delle predizioni, al confronto tra valore predetto e valore reale, al confronto tra predizioni svolte su diversi soggetti e all'influenza o meno dell'attributo sensibile nel processo di predizione \cite{verma2018fairness}.\\
+Seguono alcune definizioni di fairness \cite{verma2018fairness}:
+\begin{itemize}
+  \item \emph{Group fairness}, detta anche statistical parity, quando i soggetti dei gruppi protected e unprotected hanno la stessa probabilità di essere coinvolti in una predizione positiva. L'idea dietro questa definizione sta nel fatto che ogni soggetto debba avere la stessa probabilità di ottenere una predizione positiva;
+  \item \emph{Predictive parity}, detta anche outcome test, quando i soggetti dei gruppi protected e unprotected hanno la stessa probabilità di essere coinvolti in un true positive, quindi data una predizione positiva essa dovrà essere riscontrabile nella realtà con una particolare probabilità uguale per ogni soggetto. L'idea dietro questa definizione sta nel fatto che si voglia assicurare una certa affidabilità nelle predizioni, equa per ogni soggetto;
+  \item \emph{Test-fairness} quando i soggetti dei gruppi protected e unprotected hanno la stessa probabilità di essere coinvolti in un true positive o in un true negative, quindi a prescindere dal risultato della predizione ogni soggetto deve avere la stessa probabilità riguardante il fatto che la predizione debba essere veritiera;
+  \item \emph{Fairness through unawareness} quando nella predizione non vengono coinvolti gli attributi sensibili.
+\end{itemize}
+
+\section{Related Work}
+
+Sempre più applicazioni sono caratterizzate dall'uso di tecniche di machine learning, le quali sono addestrate tramite l'uso di dataset. Tali dataset potrebbero causare discriminazioni non solo per via della loro struttura, bensì anche per via dei dati nel caso siano decisamente sbilanciati \cite{vasudevan2020lift}.
+
+% TABELLA MOLTO BRUTTA
+
+\begin{longtable}{| p{.20\textwidth} | p{.35\textwidth} | p{.35\textwidth} |} 
+\hline\textbf{\textit{Autori}} & \textbf{\textit{Obiettivi}} & \textbf{\textit{Soluzione}}\\
+\hline
+\endhead % all the lines above this will be repeated on every page
+\multicolumn{3}{|l|}{\textbf{\textit{{* Paper}}}: “Ignorance and Prejudice” in Software Fairness}\\ 
+
+\hline 
+Zhang, Jie M and Harman, Mark
+
+&
+
+Ridurre le discriminazioni compiute dal modello modificando il dataset
+
+&
+
+Tramite apposite analisi statistiche si propone di incrementare, quanto possibile, il numero di feature presenti nel dataset
+
+\\ \hline
+
+\rowcolor{Gray}
+\multicolumn{3}{|l|}{\textbf{\textit{* Paper}}: Bias in machine learning software: why? how? what to do?} \\ \hline
+\rowcolor{Gray}
+
+Chakraborty, Joymallya and Majumder, Suvodeep and Menzies, Tim       
+
+&
+
+Individuare e risolvere le cause principali delle discriminazioni
+
+&
+
+Formulazione dell'algoritmo Fair-SMOTE, in grado di individuare e rimuovere le feature discriminanti
+
+\\ \hline
+
+\multicolumn{3}{|l|}{\textbf{\textit{{* Paper}}}: Diverse Data Selection under Fairness Constraints}\\ 
+
+\hline 
+Moumoulidou, Zafeiria and McGregor, Andrew and Meliou, Alexandra
+
+&
+
+Decrementare le probabilità di effettuare discriminazioni valutando la diversità dei dati
+
+&
+
+Formulazione di approssimazioni dell'approccio Max-Min Diversification in grado di generare sottoinsiemi che diversifichino i dati presenti nel dataset
+
+\\ \hline
+
+\rowcolor{Gray}
+\multicolumn{3}{|l|}{\textbf{\textit{** Paper}}: Software fairness} \\ \hline
+\rowcolor{Gray}
+
+Brun, Yuriy and Meliou, Alexandra      
+
+&
+
+Valutare la Software Fairness nei requisiti e trattarla come un aspetto qualitativo del software
+
+&
+
+Definizione di approcci e metodologie specifiche per ogni fase del ciclo di vita del software
+
+\\ \hline
+
+\multicolumn{3}{|l|}{\textbf{\textit{{** Paper}}}: “Fairness analysis” in requirements assignments}\\ 
+
+\hline 
+Finkelstein, Anthony and Harman, Mark and Mansouri, S Afshin and Ren, Jian and Zhang, Yuanyuan
+
+&
+
+Generazione di requisiti che rispettino la software fairness
+
+&
+
+Formulazione di un algoritmo che permette la definizione di requisiti che massimizzano il numero di definizioni di fairness rispettate
+
+\\ \hline
+
+\rowcolor{Gray}
+\multicolumn{3}{|l|}{\textbf{\textit{** Paper}}: Fairness testing: testing software for discrimination} \\ \hline
+\rowcolor{Gray}
+
+Galhotra, Sainyam and Brun, Yuriy and Meliou, Alexandra    
+
+&
+
+Rilevazione di discriminazioni tramite software testing
+
+&
+
+Formulazione di un tool di testing capace di generare test suite che rilevino le discriminazioni
+
+\\ \hline
+
+\multicolumn{3}{|c|}{\footnotesize \textbf{* Artificial Intelligence; ** Software Engineering}}
+\\\hline
+\caption{Software Fairness Related Work} % needs to go inside longtable environment
+\label{tab:myfirstlongtable}
+\end{longtable}
+
+% FINE DELLA TABELLA VERY BRTT
+
+Parlando di Artificial Intelligence, la ricerca propone diverse tecniche utili all'affievolimento delle discriminazioni:
+\begin{itemize}
+    \item Zhang et al. hanno dimostrato che avere un dataset con un gran numero di record non aiuta a ridurre la discriminazione, bensì può essere utile aumentare il numero di feature al fine di ottenere una riduzione delle discriminazioni in media pari al 38\% \cite{zhang2021ignorance};
+    \item Chakraborty et al. hanno dimostrato che la presenza di discriminazioni nelle predizioni è una conseguenza del modo in cui i dati sono stati selezionati per il dataset e della scelta delle feature. I ricercatori propongono, quindi, un algoritmo denominato Fair-SMOTE che consiste nell'individuare le feature discriminanti per rimuoverle, dimostrando che tale algoritmo non impatta sulle performance del sistema \cite{chakraborty2021bias};
+    \item Moumoulidou et al. hanno riportato l'influenza della diversità dei dati circa le discriminazioni: più sono diversificati i record e meno probabilità c'è di ottenere discriminazioni. Di conseguenza, si cerca di selezionare diversi sottoinsiemi di dati di addestramento in cui i dati contenuti sono quanto più diversi possibile \cite{moumoulidou2020diverse}.
+\end{itemize}
+Parlando, invece, di Software Engineering, si è compreso che molte discriminazioni possono essere conseguenza di requisiti ambigui o non completi, bug dovuti ad un'errata implementazione e un design poco curato. Proprio per questo motivo, si è deciso di trattare la fairness come uno degli aspetti inerenti alla qualità del software. Brun et al. riportano studi circa quanto sia importante tener conto della fairness durante il ciclo di sviluppo ed evoluzione del software. In conseguenza a ciò, evidenziano la necessità di adoperare algoritmi con un buon design e la necessità di tool capaci di identificare e riportare bug discriminanti \cite{brun2018software}.\\
+Siccome molte discriminazioni possono essere conseguenza della fase in cui vengono analizzati i requisiti del sistema da realizzare, Finkelstein et al. hanno studiato questo aspetto comprendendo quanto sia complesso considerare requisiti che non inducano a discriminazioni: questo perché la fairness non ha un'unica definizione, quindi può accadere che un requisito, se implementato, porti comunque a particolari discriminazioni per via del fatto che non si è tenuto conto di altre definizioni. Pertanto, i ricercatori citati sono riusciti a realizzare un algoritmo che permette la definizione dei requisiti in modo da rispettare quante più definizioni di fairness possibili. È importante notare che non sarà possibile che un requisito rispetti tutte le nozioni di fairness, siccome alcune tra loro sono anche incompatibili \cite{finkelstein2008fairness}.\\
+È stata data, infine, particolare rilevanza anche alla fase di testing, precisamente alla stesura di test suite utili a individuare eventuali discriminazioni. Galhotra et al. sono riusciti a sviluppare un tool capace di generare test suite utili a individuare e misurare eventuali discriminazioni svolte dal sistema. Addirittura, tale tool utilizza tecniche di pruning al fine di ridurre la dimensione delle test suite, le quali diventeranno più efficaci sui sistemi che compiono molte discriminazioni \cite{galhotra2017fairness}. Una panoramica dei lavori trattati, attualmente presenti nello stato dell'arte, è riportata in Tabella 2.1.\\
+Concludendo, il concetto di software fairness è ancora oggi in evoluzione e negli anni molti studi hanno dato sempre più importanza a quest'ultimo. Dagli studi analizzati si osserva come i ricercatori siano orientati ad adottare sempre più approcci inerenti alla Software Engineering, utilizzando tecniche e metodologie al fine di trattare la fairness in ogni fase del ciclo di vita del software. Pertanto, risulta interessante comprendere, nell'aspetto pratico, se software engineer e data scientist sono consapevoli della fairness nei sistemi intelligenti, quali approcci e best practice adottano al fine di rispettarla, se utilizzano eventuali tool per la rilevazione di discriminazioni e se si tiene conto della problematica durante la fase di progettazione.
+\newpage
