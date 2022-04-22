@@ -96,4 +96,32 @@ Per progettare, realizzare e controllare questi aspetti qualitativi essenziali p
     \item \emph{L'Engeeniring Gap}, ovvero la necessità di creare prototipi generalizzabili dei sistemi AI, con il giusto supporto all'intero ciclo di vita della Soluzione AI-Intensive;
 \end{itemize}
 
+
+
+
+\subsection{Machine Learning Life Cicle e ML Pipeline}
+Uno dei contributi generali che l'ingegneria del software cerca di dare all'intelligenza artificiale è proprio quello di sistematizzare la progettazione e lo sviluppo dei suoi modelli. In tal senso lo sviluppo di una soluzione AI-Intensive, così come un generico progetto di Machine Learning, può essere sistematizzato definendo opportuni processi ingegneristici e di conseguenza un vero e proprio ciclo di vita della soluzione che si sta progettando. Ogni progetto AI-Intensive, quindi può avere uno specifico ciclo di vita, e concentrandosi nel del machine learning, Burkov e Andriy affermano che un progetto ML-Intensive è caratterizzato inizialmente dalla comprensione e dall'analisi dello scope applicativo e degli obiettivi di business il modello \cite{burkov2020machine}, successivamente il primo passo che porta alla nascita di un modello di machine learning è capire se il modello stesso ha dei precisi obiettivi. Gli obiettivi di un modello ML-Intensive sono ovviamente diversi da quelli di business e dettano le basi di progettazione del modello stesso, un generale obiettivo di un modello ML, deve essere formalizzato in modo tale da tener conto \cite{burkov2020machine}:
+
+\begin{enumerate}
+    \item Di cosa il modello riceve come input;
+    \item Di cosa genera come output;
+    \item Dei criteri di accettabilità (o inaccettabilità) del comportamento del modello;
+\end{enumerate}
+
+Il ciclo di vita di un modello di machine learning può essere sistematizzato tramite i seguenti passaggi \cite{burkov2020machine}:
+
+\begin{enumerate}
+    \item Definizione degli obiettivi;
+    \item Collezione e preparazione dei dati;
+    \item Ingegnerizzazione delle feature;
+    \item Training del modello;
+    \item Evoluzione del Modello;
+    \item Deployment del Modello;
+    \item Fase operativa del modello e monitoraggio;
+    \item Manutenzione del modello.
+\end{enumerate}
+
+Approcci più innovativi allo sviluppo ML-Intensive, sottolineano come aspetti di monitoraggio, architecturing e monitoring continuo, siano essenziali per far evolvere un modello di pari passo con il suo ambiente di utilizzo, uno degli approcci innovativi che cerca di rispondere a queste esigenze è la specializzazione ML di DevOps, che appunto prende il nome di MLOps.\\
+
+I passaggi del ciclo di vita di vita di un modello ML-Intensive, possono essere anche organizzati e automatizzati in modo tale da configurare una vera e propria \textbf{pipeline di machine learning}, che viene definita come una sequenza di operazioni su un dataset che vanno dal suo stato iniziale, fino al rilascio del modello e la sua evoluzione. Una pipeline può includere tra i passaggi di preparazione dei dati, imputation dei dati mancanti, estrazione delle feature, data augmentation e model training\cite{burkov2020machine}. In pratica, una delle innovazioni più forti portati dalla formalizzazione di una pipeline di machine learning, è che quando un modello di machine learning è deployato in produzione, in realtà è deployata l'intera pipeline\cite{burkov2020machine} (rispondendo in maniera \emph{automatizzata} alle necessità evolutive del modello. Da notare che una pipeline di machine learning è generalmente ottimizzata quando i suoi hyperparameters di configurazione sono ottimizzati (Hyperparameters tuning) \cite{burkov2020machine}.
 \newpage
