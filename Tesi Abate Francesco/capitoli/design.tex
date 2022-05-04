@@ -1,9 +1,413 @@
-\chapter{Stato dell'arte} %\label{1cap:spinta_laterale}
+\chapter{Metodologia di ricerca} %\label{1cap:spinta_laterale}
 % [titolo ridotto se non ci dovesse stare] {titolo completo}
 %
 
-\begin{citazione}
-BREVE SPIEGAZIONE CONTENUTO CAPITOLO
-\end{citazione}
+\section{Research question}
+L'obiettivo di questo studio empirico consiste nel comprendere se data scientist, software engineer e altre figure sono a conoscenza del problema della software fairness e, nel caso, come trattano quest'ultima dal punto di vista personale e lavorativo. Si raccoglieranno, quindi, pareri da diverse figure lavorative di cui si prevede di riuscire a comprendere, in generale, quanto la fairness sia rilevante durante la progettazione di un sistema che faccia uso di tecniche di machine learning, che tecniche vengono utilizzate per garantirne il rispetto e come gli intervistati si approcciano al problema. In particolare, lo studio cerca di rispondere alle seguenti research question:\\
+\emph{"Babbo Natale è morto?"}\\
+Salve, sono Troy McClure, forse vi ricorderete di me nel film "Babbo Natale potrebbe essere morto", ma in realtà è ancora vivo. Research question risposta, tutti a casa.
 
+\section{Survey}
+\subsection{Design e struttura}
+Per rispondere alle research question si è condotto uno studio basato su un survey.\\
+Quest'ultimo è formato da 6 sezioni principali, composte da un totale di 34 domande. Tra le domande del survey ne sono presenti due discriminanti utili a comprendere se l'intervistato è adatto o meno alla compilazione; sono presenti due attention check per comprendere se l'intervistato sta compilando le domande con una particolare attenzione, quindi senza trascurare le domande e le risposte proposte.\\
+Il survey è stato realizzato tramite la piattaforma Google Forms, la quale:
+\begin{itemize}
+    \item rende possibile la compilazione del form da molteplici device e browser;
+    \item evita che una stessa persona effettui molteplici compilazioni;
+    \item salva le risposte nel caso un intervistato si disconnetta dalla compilazione;
+    \item offre una vasta varietà di tipologie di domande;
+    \item permette l'export delle risposte fornite in modo da poterle elaborare esternamente tramite particolari programmi e script.
+\end{itemize}
+Il survey è stato progettato in modo da filtrare i partecipanti che avessero un minimo di esperienza con il rispetto della fairness nei sistemi di machine learning, quindi i partecipanti con nessuna esperienza abbandoneranno presto il survey. Tutti i partecipanti del survey sono volontari, la maggior parte di essi individuati tramite la piattaforma Prolific.\\
+Sono state adottate particolari guideline durante la progettazione del survey siccome un importante obiettivo da raggiungere consiste nell'evitare che l'intervistato abbandoni o inizi a rispondere fornendo risposte superficiali o fuorvianti: ciò può accadere per via del troppo tempo impiegato per compilare il questionario, un numero di domande eccessivo, lessico di difficile comprensione e uso di frasi ambigue. Pertanto, si è deciso di:
+\begin{itemize}
+    \item strutturare il survey in modo tale che duri tra i 10 e i 15 minuti;
+    \item richiedere in molte domande l'opinione personale dell'intervistato in modo da catturare la sua attenzione e suscitare interesse;
+    \item svolgere una presentazione del survey specificando obiettivi e politiche di privacy, in modo da creare un particolare legame di fiducia con l'intervistato;
+    \item ricompensare gli intervistati per la compilazione tramite la piattaforma Prolific;
+    \item implementare un processo di follow-up, per avere maggiori informazioni dall'intervistato nel caso quest'ultimo sia interessato a collaborare con lo studio.
+\end{itemize}
+Si è prestata molta attenzione all'aspetto \emph{privacy} siccome si è ritenuto utile creare un legame di confidenza e fiducia con l'intervistato, altro aspetto che potrebbe influenza il modo in cui quest'ultimo risponde alle domande. In particolare, è stato specificato che:
+\begin{itemize}
+    \item le risposte sono anonime, quindi non si conoscerà la persona a cui faranno riferimento particolari informazioni sensibili;
+    \item le risposte saranno sottoposte ad una particolare analisi, la quale verrà poi pubblicata;
+    \item le risposte verranno utilizzate solo per fini di ricerca e non verranno diffusi ad enti e persone esterne al dipartimento di informatica dell'Università degli Studi di Salerno.
+\end{itemize}
+Le decisioni intraprese circa il design del survey fanno riferimento alle guideline definite da Andrews et al. \cite{andrews2007conducting} utili a creare un particolare livello di fiducia con l'intervistato e a ridurre la probabilità che abbandoni lo studio.
+
+\subsection{Sezioni e domande}
+\subsubsection{Introduzione al survey}
+
+Il survey accoglie l'intervistato con un piccolo disclaimer introduttivo, dal quale si comprende la problematica, perché dovrebbe interessare e gli obiettivi dello studio.
+Sostanzialmente si spiega che il rispetto della fairness è una problematica che interessa a molteplici comunità; che dovrebbe interessare a chiunque siccome ci sono stati casi, come quello di Amazon \cite{amazonrecruiting2018reuters}, in cui il software ha iniziato a svolgere predizioni discriminando categorie di soggetti; che il nostro obiettivo è comprendere le scelte che si compiono per rilevare e prevenire le discriminazioni svolte dal sistema.\\
+Il disclaimer prosegue informando l'intervistato circa alcuni aspetti del survey come il tempo in media richiesto per la compilazione, il fatto che la partecipazione sia volontaria e che quando vorrà, l'intervistato, potrà abbandonare in qualsiasi momento. Sono presenti informazioni riguardanti anche la raccolta dati, le quali rassicurano l'intervistato circa il fatto che le risposte saranno anonime, che saranno utilizzate per svolgere determinate analisi al fine di dedurre nuove informazioni e che non verranno diffuse al di fuori del dipartimento di informatica dell'Università degli Studi di Salerno.\\
+Il disclaimer si conclude dando qualche informazione conoscitiva circa gli autori del survey e con un warning che chiede all'intervistato di lasciare il survey nel caso quest'ultimo non sia disposto a rispondere a domande che chiedano informazioni sensibili.
+
+\subsubsection{Informazioni sull'utente}
+
+La prima sezione di domande del survey riguarda le informazioni sensibili dell'intervistato. Gli vengono chiesti età, gender e provenienza per comprendere se, in qualche modo, la concezione di fairness possa dipendere da tali fattori; viene chiesto il livello di istruzione, la posizione e il ruolo lavorativo, esperienza nella programmazione e nei sistemi di machine learning per comprendere se l'intervistato è adatto o meno alla compilazione.
+
+\begin{longtable}{| p{.50\textwidth} | p{.25\textwidth} | p{.15\textwidth} |} 
+\hline\textbf{\textit{Domanda}} & \textbf{\textit{Tipo di Domanda}} & \textbf{\textit{Obbligatoria}}\\
+\hline
+\endhead 
+
+\hline 
+Inserisci il tuo codice Prolific
+
+& Risposta breve
+
+& No 
+
+\\ \hline
+\rowcolor{Gray!30}
+Quanti anni hai?        
+
+&  Scelta multipla
+
+& Sì
+
+\\ \hline
+
+In quale gender ti rispecchi maggiormente?
+
+& Caselle di controllo
+
+& Sì
+
+\\ \hline
+\rowcolor{Gray!30}
+Da dove vieni?        
+
+&  Scelta multipla
+
+& Sì
+
+\\ 
+\hline 
+In quale etnia ti identifichi?
+
+& Scelta multipla
+
+& Sì
+
+\\ \hline
+
+\rowcolor{Gray!30}
+Qual è il maggior livello di istruzione che hai conseguito?
+
+& Scelta multipla
+
+& Sì
+
+\\ \hline
+Qual è la tua posizione lavorativa attuale?        
+
+&  Caselle di controllo
+
+& Sì
+
+\\ \hline
+\rowcolor{Gray!30}
+In che settori lavori attualmente?        
+
+&  Caselle di controllo
+
+& Sì
+
+\\ \hline
+Qual è il tuo ruolo professionale?        
+
+&  Caselle di controllo
+
+& Sì
+
+\\ \hline
+\rowcolor{Gray!30}
+Quanti anni di esperienza con la programmazione hai attualmente?        
+
+&  Scelta multipla
+
+& Sì
+
+\\ \hline
+Se hai esperienza con la programmazione, con quali linguaggi hai lavorato?        
+
+&  Caselle di controllo
+
+& No
+
+\\ \hline
+\rowcolor{Gray!30}
+Hai mai lavorato allo sviluppo di soluzioni AI-Intensive o a sistemi che includono moduli di machine learning?        
+
+&  Scelta multipla
+
+& Sì
+
+
+\\ \hline
+Se hai risposto "sì" alla domanda precedente, quali sono i framework o le piattaforme che usi generalmente?        
+
+&  Caselle di controllo
+
+& No
+
+
+\\ \hline
+\caption{Domande della sezione \emph{informazioni sull'utente}} % needs to go inside longtable environment
+\label{tab:myfirstlongtable}
+\end{longtable}
+
+\subsubsection{Definizione di fairness}
+Tale sezione, in realtà, è divisa in due parti: una prima parte chiede definizioni teoriche di fairness e bias, mentre una seconda parte fornisce una definizione formale di fairness alla quale il survey farà riferimento e chiede, in relazione a quest'ultima, quanti anni di esperienza possiede l'intervistato. L'ultima domanda serve a filtrare gli intervistati che non hanno esperienza con la definizione di fairness formale, la quale è stata fornita per osservare se l'intervistato ha una concezione di fairness diversa. Tutti gli intervistati che risponderanno di non avere esperienza con la definizione formale di fairness fornita verranno redirezionati alla conclusione del survey.
+
+\begin{longtable}{| p{.50\textwidth} | p{.25\textwidth} | p{.15\textwidth} |} 
+\hline\textbf{\textit{Domanda}} & \textbf{\textit{Tipo di Domanda}} & \textbf{\textit{Obbligatoria}}\\
+\hline
+\endhead 
+
+\hline 
+Puoi descrivere la fairness secondo il tuo punto di vista?
+
+& Risposta breve
+
+& Sì 
+
+\\ \hline
+\rowcolor{Gray!30}
+Puoi descrivere il concetto di bias legato ai sistemi di machine learning secondo il tuo punto di vista?
+
+& Risposta breve
+
+& Sì 
+
+\\ \hline
+
+Quanto hai sentito parlare di fairness nei seguenti ambiti?    
+
+&  Griglia a scelta multipla
+
+& Sì
+
+\\ \hline
+\rowcolor{Gray!30}
+Considerando la definizione di fairness soprastante, quanti anni di esperienza relazionati a quest'ultima possiedi?     
+
+&  Scelta multipla
+
+& Sì
+
+\\ 
+\hline 
+\caption{Domande della sezione \emph{definizione di fairness}} % needs to go inside longtable environment
+\label{tab:myfirstlongtable}
+\end{longtable}
+
+\subsubsection{Come la fairness viene approcciata a lavoro}
+
+\begin{longtable}{| p{.50\textwidth} | p{.25\textwidth} | p{.15\textwidth} |} 
+\hline\textbf{\textit{Domanda}} & \textbf{\textit{Tipo di Domanda}} & \textbf{\textit{Obbligatoria}}\\
+\hline
+\endhead 
+
+\hline 
+Secondo la tua opinione, i seguenti aspetti quanto rappresentano la soprastante generica definizione di fairness?
+
+& Griglia a scelta multipla
+
+& Sì 
+
+\\ \hline
+\rowcolor{Gray!30}
+Considerando le tue esperienze lavorative, quanto vengono applicati i seguenti approcci?
+
+& Griglia a scelta multipla
+
+& Sì 
+
+\\ \hline
+
+Utilizzi altri approcci inerenti al rispetto della fairness?   
+
+&  Risposta breve
+
+& No
+
+\\ \hline
+\rowcolor{Gray!30}
+Quali drink preferisci durante il sabato sera?
+
+&  Caselle di controllo
+
+& Sì
+
+\\ \hline 
+Dati i seguenti ruoli, quali hanno un particolare impatto sulle decisioni inerenti al rispetto della fairness?
+
+& Griglia a scelta multipla
+
+& Sì 
+
+\\ \hline
+\rowcolor{Gray!30}
+In che livello di maturità rispecchi la tua azienda riguardo il rispetto della fairness?
+
+& Griglia a scelta multipla
+
+& Sì 
+
+\\ \hline
+Considerando i seguenti aspetti, se comparati con la fairness quanto pensi possano essere importanti?
+
+& Griglia a scelta multipla
+
+& Sì 
+
+\\ \hline
+\caption{Domande della sezione \emph{come la fairness viene approcciata a lavoro}} % needs to go inside longtable environment
+\label{tab:myfirstlongtable}
+\end{longtable}
+
+\subsubsection{La fairness durante lo sviluppo della pipeline}
+
+\begin{longtable}{| p{.50\textwidth} | p{.25\textwidth} | p{.15\textwidth} |} 
+\hline\textbf{\textit{Domanda}} & \textbf{\textit{Tipo di Domanda}} & \textbf{\textit{Obbligatoria}}\\
+\hline
+\endhead 
+
+\hline 
+Considerando una generica pipeline di machine learning (come la seguente), quanto prendi in considerazione la fairness durante le seguenti fasi a lavoro?
+
+& Griglia a scelta multipla
+
+& Sì 
+
+\\ \hline
+\rowcolor{Gray!30}
+Secondo la tua opinione, quanto dovresti prendere in considerazione la fairness durante le seguenti fasi?
+
+& Griglia a scelta multipla
+
+& Sì 
+
+\\ \hline
+
+Quali tool utilizzi (se ne fai uso) per rispettare la fairness durante la costruzione delle pipeline?
+
+&  Caselle di controllo
+
+& No
+
+\\ \hline
+\rowcolor{Gray!30}
+Contando all'indietro dal 5, quale numero segue il 3?
+
+&  Scelta multipla
+
+& Sì
+
+\\ \hline 
+\caption{Domande della sezione \emph{la fairness durante lo sviluppo della pipeline}} % needs to go inside longtable environment
+\label{tab:myfirstlongtable}
+\end{longtable}
+
+\subsubsection{Trattare la fairness}
+
+\begin{longtable}{| p{.50\textwidth} | p{.25\textwidth} | p{.15\textwidth} |} 
+\hline\textbf{\textit{Domanda}} & \textbf{\textit{Tipo di Domanda}} & \textbf{\textit{Obbligatoria}}\\
+\hline
+\endhead 
+
+\hline 
+Secondo la tua opinione, quali sono gli attributi sensibili che potrebbero causare discriminazioni?
+
+& Griglia a scelta multipla
+
+& Sì 
+
+\\ \hline
+\rowcolor{Gray!30}
+Secondo la tua opinione, quali sono gli aspetti che potrebbero causare discriminazioni?
+
+& Griglia a scelta multipla
+
+& Sì 
+
+\\ \hline
+Considerando la tua esperienza lavorativa, dati i seguenti aspetti quanto potrebbero essere considerati bad practice per il rispetto della fairness?
+
+& Griglia a scelta multipla
+
+& Sì 
+
+\\ \hline
+\rowcolor{Gray!30}
+Considerando la tua esperienza lavorativa, ci sono altre bad practice da non adottare?
+
+&  Risposta breve
+
+& No
+
+\\ \hline 
+Considerando la tua esperienza lavorativa, dati i seguenti aspetti quanto potrebbero essere considerati best practice per il rispetto della fairness?
+
+& Griglia a scelta multipla
+
+& Sì 
+
+\\ \hline
+\rowcolor{Gray!30}
+Considerando la tua esperienza lavorativa, ci sono altre best practice da adottare?
+
+& Griglia a scelta multipla
+
+& Sì 
+
+\\ \hline
+\caption{Domande della sezione \emph{trattare la fairness}} % needs to go inside longtable environment
+\label{tab:myfirstlongtable}
+\end{longtable}
+
+\subsubsection{Conclusione}
+
+\begin{longtable}{| p{.50\textwidth} | p{.25\textwidth} | p{.15\textwidth} |} 
+\hline\textbf{\textit{Domanda}} & \textbf{\textit{Tipo di Domanda}} & \textbf{\textit{Obbligatoria}}\\
+\hline
+\endhead 
+
+\hline 
+Se vuoi, puoi lasciarci maggiori informazioni circa la fairness. Qualsiasi informazione che non abbiamo considerato è importante.
+
+& Paragrafo
+
+& No
+
+\\ \hline
+\rowcolor{Gray!30}
+Se vuoi rimanere aggiornato riguardo i risultati dello studio o essere contattato per partecipare ad una successiva intervista, scrivi qui il tuo indirizzo email.
+
+& Risposta breve
+
+& No
+
+\\ \hline
+Se vuoi, puoi lasciarci il tuo profilo LinkedIn
+
+& Risposta breve
+
+& No
+
+\\ \hline
+\caption{Domande della sezione \emph{conclusione}} % needs to go inside longtable environment
+\label{tab:myfirstlongtable}
+\end{longtable}
+
+\subsection{Validazione}
+Come è stato approvato, correzioni; pilot testing con 2-3 dottorandi
+\subsection{Reclutamento dei partecipanti}
+Dove è stato diffuso il paper e come sono stati reclutati i partecipanti
+\section{Analisi dei dati}
+ANALISI DEI DATI!
 \newpage
