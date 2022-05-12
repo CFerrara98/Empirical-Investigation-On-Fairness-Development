@@ -11,6 +11,7 @@
     
     \textbf{Perché un Survey di ricerca empirico?}
     Progettare un Survey di ricerca che indaghi sullo status della pratica dello sviluppo si sistemi di machine learning fair, può avere un duplice vantaggio: innanzitutto interpellare esperti del dominio è un qualcosa che indirizzerà le future attività di ricerca verso la progettazione di strumentazioni e strategie che realmente possano rispecchiare le necessità di chi quotidianamente lavora nel mondo del machine learning secondo vincoli etici sempre più stringenti, oltretutto fornire un overview iniziale delle pratiche più utilizzate può essere sicuramente d'aiuto anche agli esperti dell'ambito nel definire processi standard per trattare la fairness come altri aspetti di qualità già più sistematizzati.
+  
     \subsection{Quesiti di ricerca}
     
     DA DEFINIRE
@@ -44,6 +45,8 @@
    \subsubsection{Introduzione del Survey}
    Prima ancora di cominciare con la  compilazione del Survey, si introduce velocemente il partecipante alla problematica di ricerca connessa alla software Fairness nei sistemi AI-Intensive, fornendo anche un piccolo esempio pratico, tra quelli definiti nel capitolo stato dell'arte. Volutamente non si fornisce già all'inizio una caratterizzazione mirata del concetto, dato che è scopo dell'indagine capire se il concetto di Fairness e di Fair Bias, sia approcciato in ambito lavorativo in maniera similare rispetto a quanto formalizzato in letteratura. Inoltre viene fornita qualche informazione circa i conduttori dell'indagine empirica e sul trattamento dei dati raccolti. 
    
+   
+   
    \subsubsection{Background del partecipante}
    La prima sezione è mirata ad acquisire informazioni circa il background dei partecipanti, al fine di poter suddividere e manipolare successivamente le risposte al questionario sulla base delle informazioni sociali, culturali, lavorative dei partecipanti. La sezione è strutturata in modo tale da ricevere informazioni circa informazioni anagrafiche e etniche del partecipante, lo status lavorativo del partecipante, la sua esperienza lavorativa circa lo sviluppo e la realizzazione di sistemi ML-Intensive. Di seguito viene riportata una tabella riassuntiva della sezione con tutte le domande poste circa il background del partecipante.\\
    
@@ -67,35 +70,26 @@ Quanti anni hai?
 
 &  Scelta multipla
 
-& Sì
+& No
 
 \\ \hline
 
- In quale Gender ti rispecchi maggiormente?
+ In quale gender ti rispecchi maggiormente?
 
 & Caselle di controllo
 
-& Sì
+& No
 
 \\ \hline
 \rowcolor{Gray}
-Da dove vieni?        
+Dove lavori?        
 
 &  Scelta multipla
 
-& Sì
-
-\\ 
-\hline 
- In quale etnia ti identifichi?
-
-& Scelta multipla
-
-& Sì
-
+& No
 \\ \hline
 
-\rowcolor{Gray}
+
  Qual'è il maggior livello di istruzione che hai conseguito?
 
 & Scelta multipla
@@ -103,6 +97,7 @@ Da dove vieni?
 & Sì
 
 \\ \hline
+\rowcolor{Gray}
 Qual'è la tua posizione lavorativa attuale?        
 
 &  Caselle di controllo
@@ -110,7 +105,6 @@ Qual'è la tua posizione lavorativa attuale?
 & Sì
 
 \\ \hline
-\rowcolor{Gray}
 In che settori lavori attualmente?        
 
 &  Caselle di controllo
@@ -118,6 +112,7 @@ In che settori lavori attualmente?
 & Sì
 
 \\ \hline
+\rowcolor{Gray}
 Qual'è il tuo ruolo professionale?        
 
 &  Caselle di controllo
@@ -125,19 +120,13 @@ Qual'è il tuo ruolo professionale?
 & Sì
 
 \\ \hline
-\rowcolor{Gray}
-Quanti anni di esperienza con la programmazione hai attualmente?        
+Quanti anni di esperienza hai in questo ruolo?        
 
 &  Scelta multipla
 
 & Sì
 
-\\ \hline
-Se hai esperienza con la programmazione, con quali linguaggi hai lavorato?        
 
-&  Caselle di controllo
-
-& No
 
 \\ \hline
 \rowcolor{Gray}
@@ -147,94 +136,13 @@ Hai mai lavorato allo sviluppo di soluzioni AI-Intensive o a sistemi che includo
 
 & Sì
 
-
 \\ \hline
-Se hai risposto "sì" alla domanda precedente, quali sono i framework o le piattaforme che usi generalmente?        
-
-&  Caselle di controllo
-
-& No
-
-
-\\ \hline
-\rowcolor{Gray}
 \multicolumn{3}{|c|}{\footnotesize \textbf{* Per domanda obbligatoria si intende che il partecipante è obbligato a fornire una risposta}}
 \\\hline
 \caption{Domande della sezione Background del Survey} % needs to go inside longtable environment
 \label{tab:myfirstlongtable}
 \end{longtable}
 
-
-   \subsubsection{Cos'è la fairness per i partecipanti all'indagine?}
-   
-   I partecipanti al survey, con esperienza nello sviluppo di soluzioni ML-Intensive vengono quindi condotti quindi alla seconda sezione dell'indagine. Questa sezione, ha lo scopo di indagare su quanto effettivamente la visione di chi sviluppa sistemi di machine learning circa i concetti di fairness e discriminazione, sia effettivamente affine con quanto stabilito e riportato ad oggi allo stato dell'arte. È importante notare che fino a questo punto dell'indagine, si cerca di influenzare il partecipante il meno possibile, infatti non viene ancora fornita alcuna definizione del concetto di fairness. In tal modo i partecipanti all'indagine sono invitati a fornire un parere personale solo sulla base della propria esperienza lavorativa e della propria esperienza personale. In relazione a quello che i partecipanti rispondono circa la loro idea personale di Fairness e Bias, è obiettivo della sezione capire anche quali sono i principali mezzi di informazione che influenzano la visione dei lavoratori del settore circa il concetto di fairness. Di seguito viene riportato un riferimento tabellare (tabella 4.2) ai quesiti posti nella sezione appena descritta. 
-     \begin{longtable}{| p{.50\textwidth} | p{.25\textwidth} | p{.15\textwidth} |} 
-        \hline\textbf{\textit{Domanda}} & \textbf{\textit{Tipo di Domanda}} & \textbf{\textit{Obbligatoria}}\\
-        \hline
-        \endhead 
-        
-        \hline 
-         Dal tuo punto di vista, come descriveresti il concetto di Software Fairness?
-        
-        & Testo Breve
-        
-        & Sì 
-        
-        \\ \hline
-        \rowcolor{Gray}
-        Dal tuo punto di vista, come descriveresti il concetto di Bias (discriminazione) nei sistemi di machine learning fair-critical?        
-        
-        &  Testo Breve
-        
-        & Sì
-        
-        \\ \hline
-        
-         Quanto i seguenti (mezzi di informazione) trattano il concetto di Software Fairness?
-        
-        & Griglia scelta multipla
-        
-        & Sì
-        
-        \\ \hline
-        \rowcolor{Gray}
-        \multicolumn{3}{|c|}{\footnotesize \textbf{* Per domanda obbligatoria si intende che il partecipante è obbligato a fornire una risposta}}
-        \\\hline
-        \caption{Domande della sezione \emph{Visione Personale di Fairness} del Survey} % needs to go inside longtable environment
-        \label{tab:myfirstlongtable}
-    \end{longtable}
-   
-   
-   Una volta fornita un'opinione personale circa il concetto di Software Fairness, i partecipanti vengono a questo punto messi a confronto con una descrizione del concetto di software fairness, e delle problematiche ad essa connesse, più generale possibile. Per fornire al partecipante un'idea generale circa il topic principale del survey, si è fatto riferimento ai paper di letteratura analizzati nella sezione stato dell'arte. Dopo aver fornito al partecipante un'idea generale di Software Fairness, in questa sezione, viene chiesto quanti anni di esperienza lavorativa abbia nei sistemi di machine learning Fair-Critical, a questo punto il Survey elettronico fornisce un nuovo flusso alternativo: i partecipanti con nessuna esperienza nello sviluppo di tali sistemi, saranno poi condotti alla sezione di chiusura del documento. Di seguito viene riportato un riferimento tabellare (tabella 4.3) della sezione appena descritta. 
-   
-     \begin{longtable}{| p{.50\textwidth} | p{.25\textwidth} | p{.15\textwidth} |} 
-        \hline\textbf{\textit{Definizione-Domanda}} & \textbf{\textit{Tipo di Domanda}} & \textbf{\textit{Obbligatoria}}\\
-        \hline
-        \endhead 
-        
-        \hline 
-        \rowcolor{Gray}
-         Definizione generale del concetto di Software Fairness
-        
-        & Descrizione
-        
-        & --
-        
-        \\ \hline
-        
-        Considerando la definizione di Software Fairness fornita, Quanti anni di esperienza hai nello sviluppo dei sistemi di machine lerarning fair critical?        
-        
-        &  Scelta Multipla
-        
-        & Sì
-    
-        \\ \hline
-        \rowcolor{Gray}
-        \multicolumn{3}{|c|}{\footnotesize \textbf{* Per domanda obbligatoria si intende che il partecipante è obbligato a fornire una risposta}}
-        \\\hline
-        \caption{Domande della sezione \emph{Visione Personale di Fairness} del Survey} % needs to go inside longtable environment
-        \label{tab:myfirstlongtable}
-    \end{longtable}
     
    \subsubsection{Come la fairness è approcciatà a lavoro?}
    
@@ -249,7 +157,7 @@ Se hai risposto "sì" alla domanda precedente, quali sono i framework o le piatt
    
    Ovviamente questa sezione del Survey empirico tocca tutta una serie di aspetti che meritano di essere approfonditi eventualmente con altri studi mirati, però sicuramente indagare i concetti, di cui sopra, è senz'altro un rilevante punto di inizio per la standardizzazione dei processi circa il trattamento della software Fairness. \\\\
    
-   La tabella 4.4 riporta nel dettaglio tutte le domande poste nella sezione del Survey circa l'esperienza lavorativa rispetto al concetto di Fairness.
+   La tabella 4.2 riporta nel dettaglio tutte le domande poste nella sezione del Survey circa l'esperienza lavorativa rispetto al concetto di Fairness.
    
    \begin{longtable}{| p{.50\textwidth} | p{.25\textwidth} | p{.15\textwidth} |} 
         \hline\textbf{\textit{Definizione-Domanda}} & \textbf{\textit{Tipo di Domanda}} & \textbf{\textit{Obbligatoria}}\\
@@ -305,7 +213,7 @@ Se hai risposto "sì" alla domanda precedente, quali sono i framework o le piatt
         & Sì
         
         \\ \hline
-        In quale dei seguenti livelli di maturità, classificheresti la tua azienda circa il trattamento della Software Fairness?        
+        In quale dei seguenti livelli di maturità, classificheresti il tuo ambiente lavorativo circa il trattamento della fairness?        
         
         &  Scelta multipla
         
@@ -335,28 +243,20 @@ Se hai risposto "sì" alla domanda precedente, quali sono i framework o le piatt
    
    Volendo condurre un indagine sullo stato della pratica dello sviluppo fair-oriented, è senz'altro necessario capire in quali fasi e processi dello sviluppo ML-Intensive la fairness necessiti di essere maggiormente attenzionata. Per porre quesiti che rispondano a questa macro-problematica è senz'altro necessario capire quale modello di sviluppo si adatti di più allo sviluppo di soluzioni ML-Intensive. A tal proposito, i quesiti sono stati formulati tenendo in considerazione una generica Pipeline per lo sviluppo di sistemi di machine Learning basata sulla filosofia di sviluppo MlOps (la sezione 2.3.2 del capitolo di background fornisce dettagli teorici in materia). Sulla base della pipeline, sono stati proposti dei quesiti mirati per capire effettivamente in quali fasi dello sviluppo ML-Intensive sia attualmente attenzionata e trattata come requisito primario la software Fairness nel contesto lavorativo del partecipante. Immaginando poi che le pratiche aziendali possano differire o convergere con le opinioni personali dell'intervistato, è stato previsto un quesito specifico circa l'opinione personale dell'intervistato. Progettando questa sezione, si è osservato che potrebbe essere anche utile capire quali tool commerciali o specifici possano essere particolarmente utili per trattare la Software Fairness in una pipeline di machine learning, perciò è stato posto un quesito mirato a riguardo. \\
    
-   La tabella 4.5 riporta nel dettaglio tutte le domande poste nella sezione del Survey circa il ciclo di vita di una soluzione ml-intensive.
+   La tabella 4.3 riporta nel dettaglio tutte le domande poste nella sezione del Survey circa il ciclo di vita di una soluzione ml-intensive.
    
     \begin{longtable}{| p{.50\textwidth} | p{.25\textwidth} | p{.15\textwidth} |} 
         \hline\textbf{\textit{Domanda}} & \textbf{\textit{Tipo di Domanda}} & \textbf{\textit{Obbligatoria}}\\
         \hline
         \endhead 
         
-        \rowcolor{Gray}
         
-        Considerando una pipeline generica di machine learning (come la seguente - figura 4.1), nel tuo contesto lavorativo quanto consideri l'equità come un aspetto rilevante per ciascuna delle seguenti fasi?  
+        Considerando una generica pipeline di machine learning (come la seguente - figura 4.1), quanto consideri l'equità come un aspetto rilevante per ciascuna delle seguenti fasi nel tuo contesto lavorativo?  
         
         &  Griglia scelta multipla
         
         & Sì
         
-        \\ \hline
-        
-         Secondo la tua opinione personale, in quale delle seguenti fasi (della pipeline) la fairness dovrebbe essere considerata come un aspetto rilevante al lavoro?
-        
-        & Griglia scelta multipla
-        
-        & Sì
         
         \\ \hline
         \rowcolor{Gray}
@@ -404,7 +304,7 @@ Se hai risposto "sì" alla domanda precedente, quali sono i framework o le piatt
    
   Questa sezione, assieme alla precedente, è da considerare particolarmente rilevante per gli obiettivi dell'indagine, dato che nella sua composizione, mira proprio a rilevare e sistematizzare aspetti pratici, magari poco approfonditi fin ora dalla ricerca, che abitualmente esperti del dominio adottano durante una pipeline di sviluppo ML proprio per gestire problematiche discriminatorie.\\
   
-  La tabella 4.6 riporta nel dettaglio l'intero elenco di domande relative alla sezione appena descritta.
+  La tabella 4.4 riporta nel dettaglio l'intero elenco di domande relative alla sezione appena descritta.
    
    \begin{longtable}{| p{.50\textwidth} | p{.25\textwidth} | p{.15\textwidth} |} 
         \hline\textbf{\textit{Domanda}} & \textbf{\textit{Tipo di Domanda}} & \textbf{\textit{Obbligatoria}}\\
@@ -419,20 +319,26 @@ Se hai risposto "sì" alla domanda precedente, quali sono i framework o le piatt
         
         & Sì
         
+       
+        
         \\ \hline
         
-         Secondo la tua opinione personale, quali dei seguenti aspetti possono causare discriminazioni? 
+         Secondo la tua opinione personale, ci sono altri attributi sensibili che possono causare discriminazioni? se sì, quali? 
+        
+        & Testo Breve
+        
+        & No
+        
+         \\ \hline
+        \rowcolor{Gray}
+        Secondo la tua opinione personale, quali dei seguenti aspetti possono causare discriminazioni? 
         
         & Griglia scelta multipla
         
         & Sì
         
-        
-        
-        
         \\ \hline
-        \rowcolor{Gray}
-       Considerando la tua personale esperienza lavorativa, quanto i seguenti aspetti possono essere considerati bad practice quando si lavora con la fairness?        
+       Considerando la tua personale esperienza lavorativa, puoi classificare i seguenti aspetti come buone o cattive pratiche?        
         
         &  Griglia scelta multipla
         
@@ -440,19 +346,12 @@ Se hai risposto "sì" alla domanda precedente, quali sono i framework o le piatt
         
         \\ 
         \hline 
+        \rowcolor{Gray}
        Sulla base della tua esperienza lavorativa, esistono altre bad practice da non adottare per trattare software fairness in  una soluzione di machine learing?
         
         & Testo lungo
         
         & No
-        
-           \\ \hline
-        \rowcolor{Gray}
-       Considerando la tua personale esperienza lavorativa, quanto i seguenti aspetti possono essere considerati good practice quando si lavora con la fairness?        
-        
-        &  Griglia scelta multipla
-        
-        & Sì
         
         \\ 
         \hline 
@@ -486,13 +385,14 @@ Se hai risposto "sì" alla domanda precedente, quali sono i framework o le piatt
     
     La sezione inoltre prevede che il partecipante possa fornire un opinione aggiuntiva personale circa la tematica affrontata al fine di formalizzare altre informazioni utili al trattamento della software fairness nello sviluppo di soluzioni ML Intensive. \\
     
-     La tabella 4.7 riporta in maniera riassuntiva tutte le domande poste nella sezione di chiusura del documento.
+     La tabella 4.5 riporta in maniera riassuntiva tutte le domande poste nella sezione di chiusura del documento.
     \begin{longtable}{| p{.50\textwidth} | p{.25\textwidth} | p{.15\textwidth} |} 
         \hline\textbf{\textit{Domanda}} & \textbf{\textit{Tipo di Domanda}} & \textbf{\textit{Obbligatoria}}\\
         
         \endhead 
        
         \hline
+        \rowcolor{Gray}
         Se vuoi, puoi lasciarci maggiori informazioni circa la fairness. Qualsiasi informazione che non abbiamo considerato è importante.
 
         & Testo lungo
@@ -500,7 +400,6 @@ Se hai risposto "sì" alla domanda precedente, quali sono i framework o le piatt
         & No
         
         \\\hline 
-        \rowcolor{Gray}
         
        Se desideri restare aggiornato circa i risultati dello studio oppure essere contattato per partecipare ad interviste di approfondimento sul topic, gentilmente scrivi qui il tuo indirizzo e-mail.
         
@@ -508,13 +407,6 @@ Se hai risposto "sì" alla domanda precedente, quali sono i framework o le piatt
         
         & No
         
-        \\ \hline
-        
-        Se vuoi, puoi lasciarci qui il link al tuo profilo Linkedin
-        
-        & Testo breve
-        
-        & No
         
        
        \\ \hline
@@ -527,10 +419,34 @@ Se hai risposto "sì" alla domanda precedente, quali sono i framework o le piatt
     \end{longtable}
     
    
+
+
+
     \subsection{Validazione del Survey}
     
     Ricordare che uno survey empirico troppo lungo può facilmente causare cali di attenzione, fattore che può notevolmente inficiare la validità delle risposte raccolte\cite{andrews2007conducting}
-    STUDIO PILOTA - DA DEFINIRE e CONDURRE AL SESA  
+    In tal senso è stato deciso di realizzare una simulazione pilota con studenti magistrali, frequentanti un corso accademico specifico di Ingegneria del Software per l'intelligenza artificiale. I suddetti studenti saranno invitati a compilare una copia del Survey elettronico in modo tale da stimare il tempo di esecuzione del survey su larga scala e verificare la presenza di di quesiti/definizioni di difficile interpretazione da eventualmente semplificare a seguito del test pilota.\\
+    
+    \emph{Prerequisiti di partecipazione al test pilota}
+    \begin{itemize}
+        \item Laurea Triennale in informatica: tutti i partecipanti dispongono di tale titolo di studi;
+        \item Nozioni generiche di Software engineering for Artificial intelligence e MLOps Pipeline - Lo status di avanzamento del suddetto corso all'avvio del test pilota copre tutte le conoscenze basilari necessarie per affrontare l'argomento;
+        \item Panoramica introduttiva circa la Fairness in ambito ML-Intensive, l'attività di testing pilota sarà preceduta da una lezione teorica, circa tutte le definizioni necessarie alla fairness.
+    \end{itemize}
+    
+   \textbf{ Attenzione } - le risposte raccolte con il test pilota, non saranno utilizzate ai fini dell'analisi dei risultati, anche perchè come osservato nella sezione successiva, il survey è rivolto a figure professionali e non accademiche. Inoltre l'aver acquisito nozioni teoriche di software fairness, basate sulle stesse fonti dello studio empirico, è una chiara minaccia alla validità dei risultati.\\
+   
+   \emph{Risultati del test pilota}\\
+   Il test pilota, nelle modalità di cui sopra, ha avuto luogo in data 09/05/2022, in totale, sono state raccolte 4 risposte di studenti, magistrali o dottorandi. Ne emerso che la durata media di compilazione del survey è stata di oscilla tra i 12 e 15 minuti, quindi del tutto accettabile con i criteri di accettazione prefissati. Contestualmente all'esecuzione del test pilota è stato richiesto agli studenti di fornire qualche feedback circa le loro impressioni sui contenuti del survey tramite l'utilizzo di una bacheca condivisa (nello specifico è stata creata un'istanza di bacheca tramite il tool web \emph{Padlet}). Di seguito sono riassunti i principali cambiamenti apportati al Survey elettronico a seguito della chiusura del test Pilota:\\
+   
+   \textbf{Rimodulazione di contenuti forvianti}:
+   Dalle risposte ottenute al Survey pilota, ne è derivato che nonostante la stima dei tempi fosse soddisfacente, molte domande fossero state compilate con poca attenzione al contenuto, ipotesi poi confermata con i partecipanti al test pilota in una successiva riunione informale. Al fine di ridurre questo fenomeno nella più delicata fase di disseminazione del Survey, il team ha quindi deciso di rimodulare poi il questionario, rimuovendo quesiti ridondanti o non affini ai quesiti di ricerca (La strutturazione del survey presente in questo capitolo è consistente con le modifiche apportate al survey elettronico a seguito dell'esecuzione del test pilota). \\
+   
+   \textbf{Cambiamenti circa il trattamento delle informazioni sensibili}: 
+   tramite il Padlet uno dei partecipanti al Survey, ha espresso delle perplessità circa il dover per forza rispondere a domande inerenti dati sensibili non di carattere lavorativo (quali sesso o età), nonostante fosse prevista la risposta "Preferisco non rispondere" per ciascuna di esse.  Al fine di evitare che tale fattore possa arrecare disturbo anche durante la fase di propagazione del survey, si è deciso quindi di rendere queste domande non obbligatorie oltre a lasciare l'opzione "Preferisco non rispondere", e di valutare successivamente risposte non ottenute in modo appropriato in fase di analisi. Dopo aver apportato le opportune modifiche al survey, si ritiene che il test pilota nel suo piccolo, abbia dato riscontro positivo circa l'efficacia del survey progettato, per tanto si ritiene possibile procedere con la diffusione del survey su larga scala (nelle modalità di seguito espresse).
+    
+    
+    
     \section{Reclutamento e diffusione del Survey}
     
     Lo studio empirico da condurre, è mirato per acquisire informazioni da figure professionali che abbiano lavorato all'interno dell'ambito dell'intelligenza artificiale con particolare focus su progetti fair-critical, in particolare il survey è rivolto figure professionali quali:
@@ -547,13 +463,55 @@ Se hai risposto "sì" alla domanda precedente, quali sono i framework o le piatt
     
     Innanzitutto, una scelta chiave per la diffusione del Survey e l'acquisizione di risposte consiste nella scelta della piattaforma da utilizzare per raggiungere le figure professionali di nostro interesse. Fissando che il numero di risposte minimo da ottenere, per evitare minacce alla validità (come sarà successivamente discusso) deve necessariamente superare le 100 risposte, dopo aver effettuato un'attenta analisi delle piattaforme Social si è deciso di escludere a priori le principali piattaforme social non mirate al contesto lavorativo. 
     
-    D'altra parte la crescente crescita professionale e l'enorme compatibilità con il mondo del Data Mining di \textbf{Linkedin} \cite{sumbaly2013big}, ne fanno lo strumento ideale per ricercare ed identificare direttamente partecipanti interessanti all'indagine, nonostante la pratica possa essere più dispendiosa, si è deciso di verificare manualmente la presenza di figure di interesse a cui chiedere gentilmente di partecipare all'indagine tramite la condivisione del Survey a mezzo di e-mail.  Oltre le principali piattaforme social, è stata identificata, sotto consiglio di esperti di ricerca, la piattaforma di recruitment \textbf{Prolific}, la quale permette di formalizzare vincoli circa le categorie di destinatari a cui condividere l'indagine: QUALI VINCOLI POSSIAMO DEFINIRE, CHIEDERE AL SESA;\\
+    D'altra parte la crescente crescita professionale e l'enorme compatibilità con il mondo del Data Mining di \textbf{Linkedin} \cite{sumbaly2013big}, ne fanno lo strumento ideale per ricercare ed identificare direttamente partecipanti interessanti all'indagine, nonostante la pratica possa essere più dispendiosa, si è deciso di verificare manualmente la presenza di figure di interesse a cui chiedere gentilmente di partecipare all'indagine tramite la condivisione del Survey a mezzo di e-mail.  Oltre le principali piattaforme social, è stata identificata, sotto consiglio di esperti di ricerca, la piattaforma di recruitment \textbf{Prolific}, la quale permette di formalizzare vincoli circa le categorie di destinatari a cui condividere l'indagine. 
     
-    Per incentivare alla compilazione, da Prolific si è deciso di applicare un incentivo monetario DA CONCORDARE CON il SESA, per ogni sottomissione completa al survey, tenendo ben conto che la fase di pulizia dei dati necessità di un'attenta rimozione delle risposte invalide, come infatti suggeriscono Reid et al. circa il 33\% delle risposte sottomesse ad un Survey sottomesso con Prolific, statisticamente possono risultare invalide \cite{reid2022software}. 
+    Al fine di garantire una corretta separazione tra i partecipanti all'indagine raggiunti a mezzo di Linkedin, rispetto quelli raggiunti con Prolific, si è deciso di condividere due copie distinte del Survey, ognuna specifica per piattaforma in modo tale da poter classificare le risposte più agevolmente, distinguendo anche la fonte di appartenenza. Le domande tra le due distinte copie del Survey elettronico sono identiche, a meno dell'inserimento del proprio ID Prolific, ovviamente specifica per quest'ultima piattaforma.\\\\
+    
+    \textbf{Considerazioni aggiuntive sull'utilizzo di Prolific}
+    Come suggeriscono Reid et al. circa il 33\% delle risposte sottomesse ad un Survey sottomesso con Prolific, statisticamente possono risultare invalide \cite{reid2022software}. Al fine di ridurre al massimo le sottomissioni invalide, si è deciso di vincolare i partecipanti all'indagine Prolific tramite i seguenti filtri messi a disposizione dala piattaforma:
+    
+    \begin{itemize}
+        \item Conoscenza fluente dell'inglese;
+        \item Settore lavorativo: Informatica, Tecnologia, Ingegneria...;
+        \item Settore Lavorativo: Informatica, Scienze, Tecnologia, Ingegneria e Matematica;
+        \item Completamento di un alto livello di studi: Diploma o superiori.
+    \end{itemize}
+    
+    Non essendoci su Prolific un filtro apposito per selezionare facilmente il target di utenza di interesse, si è deciso di esplicitare testualmente i requisiti di partecipazione sovra riportati, invitando gentilmente partecipanti non qualificati ad ignorare la compilazione. 
+    
+    
     \subsection{Disponibilità e diffusione del Survey}
+    Si è deciso di rendere disponibile ai professionisti la compilazione del survey empirico solo a seguito dell'esecuzione del test pilota, e dopo eventuali modifiche di adattamento di issiue emerse a seguito dello stesso.\\
+    Il survey empirico, sarà disponibile per la compilazione nelle modalità di cui sopra, dal 12/05/2022 fino al 29/04/2082, la data di fine potrebbe variare sensibilmente in funzione del numero di risposte ricevute e del budget temporale a disposizione.\\
+    
+    In ogni caso, non appena sarà raggiunto un livello significativo di risposte collezionate, o allo scadere del termine ultimo fissato, tali da poter passare alla successiva fase di Data Cleaning e Analisi degli stessi, la compilazione del Survey sarà disabilitata tramite apposita funzione presente sulla piattaforma Google Moduli.
+    
+    \subsubsection{Chiusura del survey}
+    DA COMPILARE A SEGUITO DELLA CHIUSURA DELLE ATTIVITÀ di compilazione
+    
     \subsection{Considerazioni Etiche}
     
+    Considerando le norme vigenti in Italia, è strettamente necessario porre alcune considerazioni etiche.
+    Dato che il questionario considera l'introduzione di figure terze è stato chiarito fin da subito che:
+    \begin{itemize}
+        \item  Il partecipante sarà invitato a rilasciare informazioni che potrebbero essere soggette a vincoli di riservatezza aziendale, Di conseguenza si rammenta che la compilazione può essere abbandonata in qualsiasi momento prima della sottomissione;
+        \item Sarà garantito il rispetto della privacy, evitando di utilizzare le informazioni rilasciate, se non per gli scopi stessi stabiliti nella sezione introduttiva, e in ogni caso anonimizzando  riferimenti diretti a dati sensibili nella rielaborazione e generalizzazione dei dati ottenuti;
+        \item Il partecipante non vorrà comunicare tutti o alcuni dei dati sensibili richiesti, è stata prevista un opzione di risposta apposita, \emph{Preferisco non comunicarlo}, che appunto consentirà al partecipante di restare neutrale circa la specifica informazione richiesta.
+        \item A seguito del test pilota e prima della diffusione del survey su larga scala, è stato deciso di rendere non obbligatorie domande circa dati sensibili di carattere sociali quali sesso o etnia, per maggiori dettagli si rimanda alla sezione \textbf{Validazione del Survey};
+    \end{itemize}
+    
+    Qualora i partecipanti siano interessati ai futuri sviluppi dell'indagini, essi potranno in maniera facoltativa rilasciare la propria mail per ottenere un overview dei risultai e/o essere ricontattati per futuri approfondimenti. I partecipanti inoltre nella sezione di chiusura sono lasciati liberi di rilasciare qualsiasi informazione aggiuntiva che ritengano rilevante ai fini dell'indagine tramite apposito quesito aperto facoltativo.
+    
     \section{Data Cleaning e Analisi}
-      
+    
+     
     Scala a 5 punti, va definito in laboratorio quali strumenti potranno essere utilizzati - in ogni caso è necessario prima capire quante risposte al survey ci saranno;
+    
+    
+    \begin{wrapfigure}{l}{1\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{figure/Survey Structural diagram.png}
+        \caption{Diagramma strutturale circa le sezioni e i flussi alternativi del Survey}
+    \end{wrapfigure}
+
 \newpage
