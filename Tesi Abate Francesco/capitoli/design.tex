@@ -10,7 +10,7 @@ Salve, sono Troy McClure, forse vi ricorderete di me nel film "Babbo Natale potr
 \section{Survey}
 \subsection{Design e struttura}
 Per rispondere alle research question si è condotto uno studio basato su un survey.\\
-Quest'ultimo è formato da 6 sezioni principali, composte da un totale di 34 domande. Tra le domande del survey ne sono presenti due discriminanti utili a comprendere se l'intervistato è adatto o meno alla compilazione; sono presenti due attention check per comprendere se l'intervistato sta compilando le domande con una particolare attenzione, quindi senza trascurare le domande e le risposte proposte.\\
+Quest'ultimo è formato da 5 sezioni principali, composte da un totale di 26 domande. Tra le domande del survey ne è presente una discriminante utile a comprendere se l'intervistato è adatto o meno alla compilazione; sono presenti due attention check per comprendere se l'intervistato sta compilando le domande con attenzione, quindi senza trascurare le domande e le risposte assegnate. La domanda discriminatoria redigerà l'intervistato alla sezione \emph{conclusione} del survey, a differenza degli attention check. Per questi ultimi, sarà possibile dedurre che l'intervistato abbia effettivamente compilando il survey dando risposte casuali o meno. La risposta scorretta a questa tipologia di domanda non redigerà l'intervistato alla conclusione del survey, bensì verrà analizzata tramite apposito script con conseguente rimozione delle risposte dell'intervistato dal dataset raccolto, al fine di conservare solamente le risposte date con criterio. Riassumendo, il dataset viene pulito in modo da diventare esente, quanto possibile, da risposte insensate.\\
 Il survey è stato realizzato tramite la piattaforma Google Forms, la quale:
 \begin{itemize}
     \item rende possibile la compilazione del form da molteplici device e browser;
@@ -20,33 +20,35 @@ Il survey è stato realizzato tramite la piattaforma Google Forms, la quale:
     \item permette l'export delle risposte fornite in modo da poterle elaborare esternamente tramite particolari programmi e script.
 \end{itemize}
 Il survey è stato progettato in modo da filtrare i partecipanti che avessero un minimo di esperienza con il rispetto della fairness nei sistemi di machine learning, quindi i partecipanti con nessuna esperienza abbandoneranno presto il survey. Tutti i partecipanti del survey sono volontari, la maggior parte di essi individuati tramite la piattaforma Prolific.\\
-Sono state adottate particolari guideline durante la progettazione del survey siccome un importante obiettivo da raggiungere consiste nell'evitare che l'intervistato abbandoni o inizi a rispondere fornendo risposte superficiali o fuorvianti: ciò può accadere per via del troppo tempo impiegato per compilare il questionario, un numero di domande eccessivo, lessico di difficile comprensione e uso di frasi ambigue. Pertanto, si è deciso di:
+Sono state adottate particolari guideline durante la progettazione di quest'ultimo siccome un importante obiettivo da raggiungere consiste nell'evitare che l'intervistato abbandoni o inizi a rispondere fornendo risposte superficiali o fuorvianti: ciò può accadere per via del troppo tempo impiegato per compilare il questionario, un numero di domande eccessivo, lessico di difficile comprensione e uso di frasi ambigue. Pertanto, si è deciso di:
 \begin{itemize}
-    \item strutturare il survey in modo tale che duri tra i 10 e i 15 minuti;
-    \item richiedere in molte domande l'opinione personale dell'intervistato in modo da catturare la sua attenzione e suscitare interesse;
+    \item strutturare il survey in modo tale che duri 15 minuti circa;
+    \item effettuare domande che richiedano l'opinione personale dell'intervistato in modo da catturare la sua attenzione e suscitare interesse;
     \item svolgere una presentazione del survey specificando obiettivi e politiche di privacy, in modo da creare un particolare legame di fiducia con l'intervistato;
     \item ricompensare gli intervistati per la compilazione tramite la piattaforma Prolific;
     \item implementare un processo di follow-up, per avere maggiori informazioni dall'intervistato nel caso quest'ultimo sia interessato a collaborare con lo studio.
 \end{itemize}
-Si è prestata molta attenzione all'aspetto \emph{privacy} siccome si è ritenuto utile creare un legame di confidenza e fiducia con l'intervistato, altro aspetto che potrebbe influenza il modo in cui quest'ultimo risponde alle domande. In particolare, è stato specificato che:
+Si è prestata molta attenzione all'aspetto \emph{privacy} siccome si è ritenuto utile creare un legame di confidenza con l'intervistato, altro aspetto che potrebbe influenzare il modo in cui quest'ultimo risponde alle domande. In particolare, è stato specificato che:
 \begin{itemize}
     \item le risposte sono anonime, quindi non si conoscerà la persona a cui faranno riferimento particolari informazioni sensibili;
     \item le risposte saranno sottoposte ad una particolare analisi, la quale verrà poi pubblicata;
-    \item le risposte verranno utilizzate solo per fini di ricerca e non verranno diffusi ad enti e persone esterne al dipartimento di informatica dell'Università degli Studi di Salerno.
+    \item le risposte verranno utilizzate solo per fini di ricerca.
 \end{itemize}
 Le decisioni intraprese circa il design del survey fanno riferimento alle guideline definite da Andrews et al. \cite{andrews2007conducting} utili a creare un particolare livello di fiducia con l'intervistato e a ridurre la probabilità che abbandoni lo studio.
 
 \subsection{Sezioni e domande}
+
+Seguono le sezioni presenti nel survey, di cui per ognuna viene fornita una breve descrizione e l'elenco delle domande che la compongono.\\
+Le informazioni fornite circa le sezioni e le domande elencate sono presentate secondo le modifiche svolte a seguito dello studio pilota.
+
 \subsubsection{Introduzione al survey}
 
-Il survey accoglie l'intervistato con un piccolo disclaimer introduttivo, dal quale si comprende la problematica, perché dovrebbe interessare e gli obiettivi dello studio.
-Sostanzialmente si spiega che il rispetto della fairness è una problematica che interessa a molteplici comunità; che dovrebbe interessare a chiunque siccome ci sono stati casi, come quello di Amazon \cite{amazonrecruiting2018reuters}, in cui il software ha iniziato a svolgere predizioni discriminando categorie di soggetti; che il nostro obiettivo è comprendere le scelte che si compiono per rilevare e prevenire le discriminazioni svolte dal sistema.\\
-Il disclaimer prosegue informando l'intervistato circa alcuni aspetti del survey come il tempo in media richiesto per la compilazione, il fatto che la partecipazione sia volontaria e che quando vorrà, l'intervistato, potrà abbandonare in qualsiasi momento. Sono presenti informazioni riguardanti anche la raccolta dati, le quali rassicurano l'intervistato circa il fatto che le risposte saranno anonime, che saranno utilizzate per svolgere determinate analisi al fine di dedurre nuove informazioni e che non verranno diffuse al di fuori del dipartimento di informatica dell'Università degli Studi di Salerno.\\
-Il disclaimer si conclude dando qualche informazione conoscitiva circa gli autori del survey e con un warning che chiede all'intervistato di lasciare il survey nel caso quest'ultimo non sia disposto a rispondere a domande che chiedano informazioni sensibili.
+Il survey accoglie l'intervistato con un piccolo disclaimer introduttivo, il quale informa l'intervistato circa alcuni aspetti come il tempo in media richiesto per la compilazione, il fatto che la partecipazione sia volontaria e che quando vorrà, l'intervistato, potrà abbandonare la compilazione in qualsiasi momento. Sono presenti informazioni riguardanti anche la raccolta dati, le quali rassicurano l'intervistato circa il fatto che le risposte siano anonime, che saranno utilizzate per svolgere determinate analisi al fine di dedurre nuove informazioni che potranno essere utili per eventuali studi futuri.\\
+Il disclaimer si conclude ringraziando in anticipo l'intervistato e avvertendolo del fatto che procedendo alla compilazione avrà dato consenso alle condizioni circa il trattamento dei dati.
 
 \subsubsection{Informazioni sull'utente}
 
-La prima sezione di domande del survey riguarda le informazioni sensibili dell'intervistato. Gli vengono chiesti età, gender e provenienza per comprendere se, in qualche modo, la concezione di fairness possa dipendere da tali fattori; viene chiesto il livello di istruzione, la posizione e il ruolo lavorativo, esperienza nella programmazione e nei sistemi di machine learning per comprendere se l'intervistato è adatto o meno alla compilazione.
+La prima sezione di domande del survey riguarda le informazioni sensibili dell'intervistato: gli vengono chiesti età, gender e provenienza per comprendere se, in qualche modo, la concezione di fairness possa dipendere da tali fattori; viene chiesto il livello di istruzione, la posizione e il ruolo lavorativo, anni di esperienza nel proprio lavoro e nei sistemi di machine learning (domanda discriminatoria) per comprendere se l'intervistato è adatto o meno alla compilazione. È stata prestata particolare attenzione per il genere, attributo decisamente sensibile, al quale si è preferito dare l'opportunità di scegliere più di una risposta nel caso una persona si rispecchi in più generi e una risposta aperta per lasciare la possibilità di specificare un eventuale genere di cui non si è tenuto conto \cite{genderform}. Le domande inerenti ai dati sensibili dell'intervistato sono rese facoltative, quindi può avvalersi della facoltà di non rispondere.
 
 \begin{longtable}{| p{.50\textwidth} | p{.25\textwidth} | p{.15\textwidth} |} 
 \hline\textbf{\textit{Domanda}} & \textbf{\textit{Tipo di Domanda}} & \textbf{\textit{Obbligatoria}}\\
@@ -66,7 +68,7 @@ Quanti anni hai?
 
 &  Scelta multipla
 
-& Sì
+& No
 
 \\ \hline
 
@@ -74,7 +76,7 @@ In quale gender ti rispecchi maggiormente?
 
 & Caselle di controllo
 
-& Sì
+& No
 
 \\ \hline
 \rowcolor{Gray!30}
@@ -82,19 +84,11 @@ Da dove vieni?
 
 &  Scelta multipla
 
-& Sì
+& No
 
 \\ 
-\hline 
-In quale etnia ti identifichi?
+\hline
 
-& Scelta multipla
-
-& Sì
-
-\\ \hline
-
-\rowcolor{Gray!30}
 Qual è il maggior livello di istruzione che hai conseguito?
 
 & Scelta multipla
@@ -102,6 +96,8 @@ Qual è il maggior livello di istruzione che hai conseguito?
 & Sì
 
 \\ \hline
+
+\rowcolor{Gray!30}
 Qual è la tua posizione lavorativa attuale?        
 
 &  Caselle di controllo
@@ -109,7 +105,7 @@ Qual è la tua posizione lavorativa attuale?
 & Sì
 
 \\ \hline
-\rowcolor{Gray!30}
+
 In che settori lavori attualmente?        
 
 &  Caselle di controllo
@@ -117,6 +113,8 @@ In che settori lavori attualmente?
 & Sì
 
 \\ \hline
+
+\rowcolor{Gray!30}
 Qual è il tuo ruolo professionale?        
 
 &  Caselle di controllo
@@ -124,19 +122,11 @@ Qual è il tuo ruolo professionale?
 & Sì
 
 \\ \hline
-\rowcolor{Gray!30}
-Quanti anni di esperienza con la programmazione hai attualmente?        
 
+Quanti anni di esperienza hai nel ruolo assunto attualmente?        
 &  Scelta multipla
 
 & Sì
-
-\\ \hline
-Se hai esperienza con la programmazione, con quali linguaggi hai lavorato?        
-
-&  Caselle di controllo
-
-& No
 
 \\ \hline
 \rowcolor{Gray!30}
@@ -146,66 +136,14 @@ Hai mai lavorato allo sviluppo di soluzioni AI-Intensive o a sistemi che includo
 
 & Sì
 
-
-\\ \hline
-Se hai risposto "sì" alla domanda precedente, quali sono i framework o le piattaforme che usi generalmente?        
-
-&  Caselle di controllo
-
-& No
-
-
 \\ \hline
 \caption{Domande della sezione \emph{informazioni sull'utente}} % needs to go inside longtable environment
 \label{tab:myfirstlongtable}
 \end{longtable}
 
-\subsubsection{Definizione di fairness}
-Tale sezione, in realtà, è divisa in due parti: una prima parte chiede definizioni teoriche di fairness e bias, mentre una seconda parte fornisce una definizione formale di fairness alla quale il survey farà riferimento e chiede, in relazione a quest'ultima, quanti anni di esperienza possiede l'intervistato. L'ultima domanda serve a filtrare gli intervistati che non hanno esperienza con la definizione di fairness formale, la quale è stata fornita per osservare se l'intervistato ha una concezione di fairness diversa. Tutti gli intervistati che risponderanno di non avere esperienza con la definizione formale di fairness fornita verranno redirezionati alla conclusione del survey.
+\subsubsection{Come viene approcciata a lavoro la fairness?}
 
-\begin{longtable}{| p{.50\textwidth} | p{.25\textwidth} | p{.15\textwidth} |} 
-\hline\textbf{\textit{Domanda}} & \textbf{\textit{Tipo di Domanda}} & \textbf{\textit{Obbligatoria}}\\
-\hline
-\endhead 
-
-\hline 
-Puoi descrivere la fairness secondo il tuo punto di vista?
-
-& Risposta breve
-
-& Sì 
-
-\\ \hline
-\rowcolor{Gray!30}
-Puoi descrivere il concetto di bias legato ai sistemi di machine learning secondo il tuo punto di vista?
-
-& Risposta breve
-
-& Sì 
-
-\\ \hline
-
-Quanto hai sentito parlare di fairness nei seguenti ambiti?    
-
-&  Griglia a scelta multipla
-
-& Sì
-
-\\ \hline
-\rowcolor{Gray!30}
-Considerando la definizione di fairness soprastante, quanti anni di esperienza relazionati a quest'ultima possiedi?     
-
-&  Scelta multipla
-
-& Sì
-
-\\ 
-\hline 
-\caption{Domande della sezione \emph{definizione di fairness}} % needs to go inside longtable environment
-\label{tab:myfirstlongtable}
-\end{longtable}
-
-\subsubsection{Come la fairness viene approcciata a lavoro}
+In questa sezione viene fornita una definizione formale di fairness alla quale il survey farà riferimento nelle successive domande. Tale definizione è stata fornita per dare un'idea comune di fairness, utile nel caso in cui qualche intervistato avesse un'idea diversa o comunque ambigua. Le domande di tale sezione cercano di comprendere se e come l'azienda tratta la fairness, esplorando determinati aspetti lavorativi e cercando di comprendere il punto di vista aziendale riguardo tale argomento. È particolarmente interessante, ad esempio, la domanda inerente al livello di maturità dell'azienda circa il rispetto della fairness, quindi la classificazione del modo in cui l'azienda affronta tale problematica. Tale domanda risulta essere un riadattamento del Capability Maturity Model, modello capace di descrivere l'organizzazione aziendale circa lo sviluppo del software \cite{cmm}: in tal caso, la domanda specializza il modello sul trattamento della fairness.  È presente, inoltre, un attention check che chiede all'intervistato quali siano i drink che preferisce bere durante il sabato sera: tra le risposte sono presenti alcune opzioni che non siano drink, cioè \emph{casa} e \emph{calzini}.
 
 \begin{longtable}{| p{.50\textwidth} | p{.25\textwidth} | p{.15\textwidth} |} 
 \hline\textbf{\textit{Domanda}} & \textbf{\textit{Tipo di Domanda}} & \textbf{\textit{Obbligatoria}}\\
@@ -266,11 +204,13 @@ Considerando i seguenti aspetti, se comparati con la fairness quanto pensi possa
 & Sì 
 
 \\ \hline
-\caption{Domande della sezione \emph{come la fairness viene approcciata a lavoro}} % needs to go inside longtable environment
+\caption{Domande della sezione \emph{come viene approcciata a lavoro la fairness?}} % needs to go inside longtable environment
 \label{tab:myfirstlongtable}
 \end{longtable}
 
 \subsubsection{La fairness durante lo sviluppo della pipeline}
+
+In questa sezione vengono poste due domande utili a comprendere se durante la costruzione delle pipeline si tiene conto dell'aspetto fairness e se vengono utilizzati particolari tool che ne assicurino il rispetto. All'intervistato viene mostrata una generica pipeline di machine learning in modo da fargli comprendere a cosa fa riferimento la domanda nel dettaglio. Anche in questa sezione è presente un attention check, il quale chiede all'intervistato quale numero viene dopo il 3 contando all'indietro.
 
 \begin{longtable}{| p{.50\textwidth} | p{.25\textwidth} | p{.15\textwidth} |} 
 \hline\textbf{\textit{Domanda}} & \textbf{\textit{Tipo di Domanda}} & \textbf{\textit{Obbligatoria}}\\
@@ -278,7 +218,7 @@ Considerando i seguenti aspetti, se comparati con la fairness quanto pensi possa
 \endhead 
 
 \hline 
-Considerando una generica pipeline di machine learning (come la seguente), quanto prendi in considerazione la fairness durante le seguenti fasi a lavoro?
+Considerando una generica pipeline di machine learning (come la seguente mostrata tramite immagine), quanto tieni in considerazione l'aspetto fairness durante le seguenti fasi a lavoro?
 
 & Griglia a scelta multipla
 
@@ -286,13 +226,6 @@ Considerando una generica pipeline di machine learning (come la seguente), quant
 
 \\ \hline
 \rowcolor{Gray!30}
-Secondo la tua opinione, quanto dovresti prendere in considerazione la fairness durante le seguenti fasi?
-
-& Griglia a scelta multipla
-
-& Sì 
-
-\\ \hline
 
 Quali tool utilizzi (se ne fai uso) per rispettare la fairness durante la costruzione delle pipeline?
 
@@ -301,7 +234,7 @@ Quali tool utilizzi (se ne fai uso) per rispettare la fairness durante la costru
 & No
 
 \\ \hline
-\rowcolor{Gray!30}
+
 Contando all'indietro dal 5, quale numero segue il 3?
 
 &  Scelta multipla
@@ -314,6 +247,9 @@ Contando all'indietro dal 5, quale numero segue il 3?
 \end{longtable}
 
 \subsubsection{Trattare la fairness}
+
+In questa sezione si chiedono all'intervistato pareri circa quelle che potrebbero essere le cause delle discriminazioni svolte dal sistema e quelle che potrebbero essere le bad e le best practice. Lo scopo è venire a conoscenza sia di pratiche che possano garantire il rispetto della fairness e mitigare eventuali discriminazioni svolte dal sistema e sia pratiche da non seguire siccome potrebbero portare a problemi che non garantiscano il rispetto della fairness. In generale, all'intervistato vengono poste una serie di pratiche che hanno a che fare con il dataset e con il modello predittivo: sarà quest'ultimo a valutare se tali pratiche possano essere considerate come best o bad practice in relazione al rispetto della fairness. Molte delle practice proposte provengono dalla letteratura inerente al machine learning, mentre altre sono ipotizzate e proposte dagli autori del survey.\\
+Vengono, inoltre, posti due quesiti aperti in cui si chiedono maggiori informazioni sulle bad e le best practice utilizzate dagli intervistati: purtroppo, nello stato attuale, la ricerca non ha definito alcuna best practice, quindi sarebbe più che utile sapere se molteplici intervistati sono a conoscenza di best e bad practice che, magari, non sono state prese in considerazione nella composizione delle domande.
 
 \begin{longtable}{| p{.50\textwidth} | p{.25\textwidth} | p{.15\textwidth} |} 
 \hline\textbf{\textit{Domanda}} & \textbf{\textit{Tipo di Domanda}} & \textbf{\textit{Obbligatoria}}\\
@@ -329,6 +265,13 @@ Secondo la tua opinione, quali sono gli attributi sensibili che potrebbero causa
 
 \\ \hline
 \rowcolor{Gray!30}
+Secondo la tua opinione, possono esserci altri attributi sensibili che potrebbero causare discriminazioni? Se sì, quali?
+
+& Risposta breve
+
+& No
+
+\\ \hline
 Secondo la tua opinione, quali sono gli aspetti che potrebbero causare discriminazioni?
 
 & Griglia a scelta multipla
@@ -336,34 +279,27 @@ Secondo la tua opinione, quali sono gli aspetti che potrebbero causare discrimin
 & Sì 
 
 \\ \hline
-Considerando la tua esperienza lavorativa, dati i seguenti aspetti quanto potrebbero essere considerati bad practice per il rispetto della fairness?
+\rowcolor{Gray!30}
+Considerando la tua esperienza lavorativa, puoi classificare i seguenti aspetti come bad o best practice?
 
 & Griglia a scelta multipla
 
 & Sì 
 
 \\ \hline
-\rowcolor{Gray!30}
 Considerando la tua esperienza lavorativa, ci sono altre bad practice da non adottare?
 
 &  Risposta breve
 
 & No
 
-\\ \hline 
-Considerando la tua esperienza lavorativa, dati i seguenti aspetti quanto potrebbero essere considerati best practice per il rispetto della fairness?
-
-& Griglia a scelta multipla
-
-& Sì 
-
 \\ \hline
 \rowcolor{Gray!30}
 Considerando la tua esperienza lavorativa, ci sono altre best practice da adottare?
 
-& Griglia a scelta multipla
+& Risposta breve
 
-& Sì 
+& No
 
 \\ \hline
 \caption{Domande della sezione \emph{trattare la fairness}} % needs to go inside longtable environment
@@ -372,13 +308,16 @@ Considerando la tua esperienza lavorativa, ci sono altre best practice da adotta
 
 \subsubsection{Conclusione}
 
+Ultima sezione del survey è quella conclusiva, nella quale si ringrazia l'intervistato per il tempo speso e si chiede la cortesia di lasciare i propri contatti nel caso voglia collaborare con eventuali altre domande di approfondimento. È data possibilità tramite un'apposita domanda di aggiungere nuove informazioni e nuovi dettagli che, magari, non sono stati trattati o che sono stati tralasciati durante il survey.\\
+Tale sezione può essere raggiunta compilando correttamente il survey o rispondendo, alla domanda discriminatoria, che non si ha mai lavorato su sistemi di machine learning o che includano un modulo intelligente.
+
 \begin{longtable}{| p{.50\textwidth} | p{.25\textwidth} | p{.15\textwidth} |} 
 \hline\textbf{\textit{Domanda}} & \textbf{\textit{Tipo di Domanda}} & \textbf{\textit{Obbligatoria}}\\
 \hline
 \endhead 
 
 \hline 
-Se vuoi, puoi lasciarci maggiori informazioni circa la fairness. Qualsiasi informazione che non abbiamo considerato è importante.
+Se vuoi, puoi raccontarci di più circa la fairness. Qualsiasi informazione che non abbiamo considerato è importante.
 
 & Paragrafo
 
@@ -393,21 +332,49 @@ Se vuoi rimanere aggiornato riguardo i risultati dello studio o essere contattat
 & No
 
 \\ \hline
-Se vuoi, puoi lasciarci il tuo profilo LinkedIn
-
-& Risposta breve
-
-& No
-
-\\ \hline
 \caption{Domande della sezione \emph{conclusione}} % needs to go inside longtable environment
 \label{tab:myfirstlongtable}
 \end{longtable}
 
 \subsection{Validazione}
-Come è stato approvato, correzioni; pilot testing con 2-3 dottorandi
+
+Un aspetto cruciale del survey consiste nell'assicurare un particolare livello di qualità, difatti le domande e le risposte sono state più volte revisionate e riformulate al fine di renderle scorrevoli e immediate, con un lessico decisamente semplice e comprensibile da quante più persone possibili. È stato rivisto più volte il numero di domande, cercando di escludere quelle meno rilevanti in modo da evitare che il survey possa risultare troppo lungo. Una volta definita una prima versione del survey è stato condotto uno studio pilota, il che consiste nel far compilare il survey da un piccolo gruppo di persone in modo da poter ottenere pareri utili per migliorare quest'ultimo. Lo studio pilota è stato eseguito da diversi studenti del corso di Software Engineering for Artificial Intelligence della magistrale in Software Engineering dell'Università degli Studi di Salerno: alla conclusione della lezione è stata chiesta la cortesia agli studenti di compilare il questionario e di segnalare eventuali problematiche laddove se ne fossero presentate. In realtà, durante il test pilota è stata somministrata una copia del reale survey in modo da tenere separate le risposte ottenute durante questa fase rispetto a quelle ottenute tramite intervistati reali.\\
+Pertanto, è stato messo a disposizione degli studenti un link che lasciasse la possibilità di riportare problematiche e suggerimenti: da qui, uno studente ha segnalato il fatto che chiedere obbligatoriamente dati sensibili potrebbe dar fastidio. Pertanto, le domande richiedenti tali dati sono state rese non obbligatorie.\\
+Inoltre, il survey del test pilota comprende una domanda aggiuntiva posta alla fine di quest'ultimo nella quale si chiede allo studente quanto tempo, orientativamente, ha speso nella compilazione. La maggior parte delle risposte hanno segnalato un tempo più alto rispetto a quello valutato, quindi si è deciso di rimuovere una sezione inizialmente presente nel test pilota. Tale sezione riguardava la definizione della fairness ed era, a sua volta, suddivisa in due parti: una prima parte chiedeva definizioni teoriche di fairness e bias, mentre una seconda parte forniva una definizione formale di fairness alla quale il survey avrebbe fatto riferimento e chiedeva, in relazione a quest'ultima, quanti anni di esperienza possiede l'intervistato. Quest'ultima domanda era discriminatoria ed era utile al punto da filtrare gli intervistati che non hanno esperienza con la definizione di fairness fornita. Si è valutato di rimuovere tale sezione siccome non era ritenuta essenziale ai fini dello studio da svolgere, mentre la definizione formale di fairness fornita è stata spostata nel capitolo \emph{come viene approcciata a lavoro la fairness?}\\
+Dopo aver apportato le modifiche elencate, il survey è stato diffuso tramite la piattaforma Prolific e somministrato a 200 partecipanti circa.
+
 \subsection{Reclutamento dei partecipanti}
-Dove è stato diffuso il paper e come sono stati reclutati i partecipanti
+Uno dei primi quesiti sorti durante la progettazione del survey consisteva nello stabilire quali fossero le tipologie di intervistati al quale sottomettere il survey. Da un'apposita sessione di brainstorming, è stato valutato possa essere idoneo considerare le seguenti figure:
+\begin{itemize}
+    \item Data Scientist;
+    \item Software Engineer;
+    \item Data Engineer;
+    \item Manager oppure Project Manager;
+    \item Software Analyst;
+    \item Software Architect.
+\end{itemize}
+Nulla vieta la somministrazione del survey ad altre figure, difatti nell'apposita domanda che chiede il proprio ruolo professionale nella sezione introduttiva è possibile dichiarare anche ruoli diversi. L'idea sta nel fatto che possa essere una buona idea poter classificare idee e ragionamenti circa il rispetto della fairness a seconda del ruolo professionale, in modo da individuare particolari scuole di pensiero in dipendenza da quest'ultimo.\\
+Gli intervistati sono stati individuati principalmente tramite la piattaforma Prolific, la quale permette di reclutare molteplici partecipanti pagando una particolare somma per ognuno di essi. Si è provato ad attrarre un'altra fetta di partecipanti tramite il social network LinkedIn, pubblicando su alcune community inerenti al machine learning un post in cui si chiedeva la compilazione del survey, dando una piccola anticipazione riguardante i contenuti del survey e l'importanza di contribuire a tale studio. Essendo LinkedIn utilizzato da molteplici professionisti si è supposto che la partecipazione al survey da questi ultimi sia pienamente volontaria e svolta con massima serietà, siccome difficilmente un utente non interessato si prenderebbe la briga di compilare un questionario del genere e, nel caso ipotetico accada, ci penserebbero le domande discriminatorie e gli attention check a filtrare le risposte non valide. Come per il test pilota, anche per LinkedIn è stata creata una copia del survey non comprendente la domanda in cui si chiede l'identificativo utente di Prolific.\\
+Tornando alle figure da considerare adatte alla compilazione del survey, Prolific permette di definire alcuni criteri per i quali è possibile scegliere il pubblico adatto alla somministrazione. Il problema è che i filtri messi a disposizione da Prolific sono abbastanza generici e non permettono di filtrare figure come Data Scientist, Software Engineer, etc.\\
+Pertanto, oltre allo stabilire i filtri generici proposti ad Prolific, nella descrizione del survey è stata esplicitamente richiesta la partecipazione di ruoli adeguati all'argomento; altrimenti, si è pregati di non compilare il survey. I filtri impostati tramite Prolific sono i seguenti:
+\begin{itemize}
+    \item Saper parlare e scrivere in inglese fluente;
+    \item Amare il proprio lavoro e saper rispettare i propri colleghi;
+    \item Aver avuto esperienze lavorative in campi scientifici;
+    \item Aver conseguito almeno il diploma delle scuole superiori;
+    \item Essere disposti ad accettare condizioni inerenti al trattamento dei dati;
+    \item Saper usare un computer o un cellulare.
+\end{itemize}
+
+\section{Pulizia dei dati}
+Il survey è stato compilato da circa 200 persone in poche ore, di cui circa 130 hanno passato la domanda discriminatoria. In ogni caso, tali partecipanti vanno ricompensati tramite Prolific, il quale lascia all'organizzatore del survey la possibilità di permettere il pagamento della quota ad un partecipante o di rifiutarlo: in quest'ultimo caso bisogna avere buoni motivi per negare il pagamento al partecipante. Un ottimo motivo è la risposta errata ad almeno un attention check, la quale dimostra che l'utente sta rispondendo senza prestare attenzione.\\
+Le risposte dati negli attention check sono state analizzate manualmente una ad una per ben due volte, al fine di essere sicuri circa chi escludere dal pagamento. Sono stati rilevati ben 17 partecipanti che hanno risposto erroneamente ad almeno un attention check. Sono stati, inoltre, esclusi automaticamente da Prolific alcuni partecipanti che hanno deciso di abbandonare prematuramente lo studio e alcuni che non hanno fornito il completation code, il quale serve a dimostrare che il questionario è stato effettivamente compilato.\\
+Dal dataset di risposte sono state rimosse, quindi, tutte le risposte date dai soggetti contrassegnati come rifiutati per il pagamento.\\
+Riguardo il survey pubblicato sul LinkedIn, sono state ricevute solamente due risposte ritenute poco utili ai fini dell'analisi siccome ricevute da figure professionali per nulla attinenti al machine learning e alla fairness. Per tale motivo, si è deciso di considerare solamente le risposte ricevute tramite la piattaforma Prolific.
+
 \section{Analisi dei dati}
 ANALISI DEI DATI!
+Non dimenticare di scrivere che alcuni hanno lasciato la propria email :))))))
+\section{Minacce alla validità}
+AAAAAAAAAAAA UNA MINACCIA!
 \newpage
