@@ -9,12 +9,130 @@
         \item Se è possibile sistematizzare buone e cattive pratiche da adottare durante lo sviluppo di un modulo di machine learning fair-oriented.
     \end{itemize}
     
-    \textbf{Perché un Survey di ricerca empirico?}
+    \textbf{Perché un Survey di ricerca empirico?}\\
     Progettare un Survey di ricerca che indaghi sullo status della pratica dello sviluppo si sistemi di machine learning fair, può avere un duplice vantaggio: innanzitutto interpellare esperti del dominio è un qualcosa che indirizzerà le future attività di ricerca verso la progettazione di strumentazioni e strategie che realmente possano rispecchiare le necessità di chi quotidianamente lavora nel mondo del machine learning secondo vincoli etici sempre più stringenti, oltretutto fornire un overview iniziale delle pratiche più utilizzate può essere sicuramente d'aiuto anche agli esperti dell'ambito nel definire processi standard per trattare la fairness come altri aspetti di qualità già più sistematizzati.
   
     \subsection{Quesiti di ricerca}
     
-    DA DEFINIRE
+    In diretta continuazione con quanto osservato a chiusura del capitolo precedente (riflessioni sullo stato dell'arte), molti sono i quesiti che possono nascere al fine di avvicinare gli studi di ricerca inerenti lo sviluppo di soluzioni ML Fair-Oriented al reale contesto lavorativo. Il Survey Empirico, descritto a partire dalla successiva sezione del capitolo, mira a coinvolgere esperti del settore, al fine di fornire dettagli analitici inerenti lo stato della pratica aziendale, che possano rispondere a due macro quesiti principali:
+    
+    \begin{enumerate}
+		\item \textbf{RQ1}: In che modo il concetto di Software Fairness è attualmente percepito nell'ambiente lavorativo ML-Intensive?
+		\item \textbf{RQ2}: Quali sono i fattori che influenzano i livelli di Software Fairness (Root Causes, Bad \& Best Practices) nello sviluppo di una soluzione Fair Critical?
+    \end{enumerate}  
+
+	Questi due macro quesiti di ricerca, ovviamente necessitano di essere approfonditi in maniera opportuna, e in ragione al budget a disposizione per le attività di tesi, si è deciso di separare il lavoro di analisi, in due elaborati separati. In particolare, gli obiettivi di ricerca del primo macro quesito [\textbf{RQ1}] e la successiva analisi dei risultati (analisi dell'attuale status di maturità della software fairness in ambito aziendale), sarà approfondita nei successivi passi di questo elaborato, mentre per quanto riguarda lo studio relativo i fattori di influenza [\textbf{RQ2}], è da considerarsi oggetto di studio del parallelo lavoro di tesi \textbf{Indagine empirica sullo stato della pratica della Software Fairness}, a cura del tesista \emph{Francesco Abate}. Da notare però, che per motivi di budget, è stato progettato un unico Survey Elettronico che permetta di collezionare dati utili ad approfondire entrambi i macro quesiti prefissati, in ragion di ciò la successiva sezione (Design del Survey Empirico) fornirà dettagli di progettazione inerenti il questionario nella sua completezza.
+	
+	\subsection{Stato della pratica: Obiettivi specifici di indagine}
+	
+	Come osservato, questo documento di tesi, mira quindi a fornire maggiori dettagli sul primo macro-quesito di ricerca poc'anzi formalizzato: \textbf{In che modo il concetto di Software Fairness è attualmente percepito nell'ambiente lavorativo ML-Intensive?}\\
+	Questo macro quesito, mira a fornire alla ricerca un'overview analitica circa le attuali pratiche lavorative adottate da professionisti (quali Data Scientists o Ingegneri del Software) nello sviluppo di soluzioni ML-Intensive. Per fare ciò si è deciso di scomporre il macro quesito iniziale in 5 sotto obiettivi di ricerca, che in prima istanza guidano la successiva fase di progettazione del survey (per la specifica dei quesiti da proporre agli esperti coinvolti):\\
+	
+	\begin{center}
+			\hspace*{-5mm}\begin{tikzpicture}
+			\node [mybox] (box){%
+				\begin{minipage}{.70\textwidth}
+					\centering
+					\textit{RQ1.1 - Quali sono i migliori approcci e definizioni per trattare la fairness in un contesto lavorativo?}
+				\end{minipage}
+			};
+		\end{tikzpicture}%
+	\end{center}
+
+
+	Dall'analisi dello stato dell'arte, si è osservato che il concetto di software fairness, non è univocamente interpretabile, molte sono le definizioni e gli approcci formalizzabili a seconda delle specifiche esigenze connesse al dominio di uno specifico problema, ma nella pratica lavorativa, quali sono le sfaccettature del concetto di fairness che maggiormente aiutano i lavoratori nella formalizzazione degli obiettivi specifici, quali sono invece gli approcci di misurazione (tra quelle fornite dallo stato dell'arte)) che i professionisti adottano nel misurare i livelli specifici di Software Fairness di un modulo ML-Intensive. Per rispondere a questo quesito, si è deciso di rimodulare (in maniera semi-formale) alcuni approcci e definizioni formali analizzate precedentemente, al fine di capire sulla base del campione di indagine, quali definizioni o approcci possano essere effettivamente più affini e applicabili in pratica. Nel dettaglio i quesiti utili a rispondere a questo sub-goal di ricerca metteranno a confronto (con scala di valori qualitativi, direttamente convertibile in scala numerica di 5 valori), 3 macro-sfaccettature del concetto di fairness:
+	
+	\begin{itemize}
+		\item Equità nel formulare risultati di predizione;
+		\item Non formulare predizioni sulla base di discriminazioni derivanti da feature sensibili;
+		\item Assumere decisioni al fine di garantire risultati paritari per gruppi minoritari e maggioritari.
+	\end{itemize}
+
+	e tre macro approcci di misurazione, che sono alla base di diverse metriche, come osservato nell'analisi dello stato della pratica:
+	
+	\begin{itemize}
+		\item Approcci basati su probabilità matematica di predizione;
+		\item Approcci basati su similarità matematica degli individui;
+		\item Approcci basati su relazioni causali tra attributi sensibili e risultati.
+	\end{itemize}
+
+	I relativi quesiti del survey, propongono tali approcci in scala e chiedono al singolo partecipante di specificare un valore in scala (da 1 a 5) che permetta di capire quanto un singola sfaccettatura o singolo approccio di misurazione, sia affine alla sua pratica lavorativa. Infine è stata lasciata la possibilità (tramite quesito aperto) di evidenziare approcci o definizioni diverse, affini o meno, a quelle specificate dai quesiti multipli.\\
+	
+	\begin{center}
+		\hspace*{-5mm}\begin{tikzpicture}
+			\node [mybox] (box){%
+				\begin{minipage}{.70\textwidth}
+					\centering
+					\textit{RQ1.2 - Come è composto un team ottimale per lo sviluppo di moduli ML-Intensive Fair Critical?}
+				\end{minipage}
+			};
+		\end{tikzpicture}%
+	\end{center}
+	
+	Fornire un'analisi circa lo status lavorativo in termini di Software Fairness, necessità senz'altro di approfondire quali figure professionali hanno più impatto rispetto ad altre nell'analisi e nello sviluppo di soluzioni ML-Intensive fair-critical. Per rispondere a questo quesito, il survey empirico includerà uno specifico quesito, che chiederà ai partecipanti all'indagine di specificare quanto figure professionali quali: Data Scientists, Ingegneri del Software, Data Engineer, Project Manager, Analisti, Architect o \emph{Esperti specifici}, abbiano maggior impatto nello sviluppo di soluzioni Fair-Critical. L'impatto di ciascuna figura sarà valutato in scala da 1 a 5 (nessun impatto a impatto molto alto).\\
+	
+	\begin{center}
+		\hspace*{-5mm}\begin{tikzpicture}
+			\node [mybox] (box){%
+				\begin{minipage}{.70\textwidth}
+					\centering
+					\textit{RQ1.3 - Quanto il concetto di software fairness è importante se paragonato ad altri aspetti non funzionali?}
+				\end{minipage}
+			};
+		\end{tikzpicture}%
+	\end{center}
+	
+	Considerando che alcuni lavori di ricerca di tipo ingegneristico, suggeriscono di trattare il concetto di software fairness, come un vero e proprio requisito non funzionale prioritario di un sistema ML-Intensive \cite{brun2018software}, si è deciso di chiedere ai partecipanti all'indagine quanto altri aspetti non funzionali, maggiormente riconosciuti dagli standard ingegneristici (modello FURPS+), oppure ampiamente utilizzati nella pratiche di sviluppo di soluzioni ml-intensive, possano essere più o meno rilevanti rispetto il concetto di software fairness. Nell'ottica di formalizzare nel successivo processo di generalizzazione dei risultati dei veri e propri trade-off tra fairness e altri aspetti non funzionali, lo specifico quesito, chiede ai partecipanti di indicare quanto un determinato aspetto non funzionale, possa essere più o meno impattante rispetto la fairness nello sviluppo di soluzioni AI-Intensive. In particolare, il quesito specifico chiede ai partecipanti di confrontare il concetto di Software Fairness, con:
+	
+	\begin{itemize}
+		\item Usabilità;
+		\item Affidabilità;
+		\item Performance;
+		\item Supportabilità;
+		\item Accuracy;
+		\item Sicurezza;
+		\item Manutenibilità e retraining del sistema;
+		\item Riusabilità e scalabilità.
+	\end{itemize}
+	
+	Anche per questo quesito è stata formalizzata una scala di valori che va da 1 (Estremamente meno importante del concetto di fairnes) a 5 (Estremamente più importante del concetto di fairness).\\
+    
+    	\begin{center}
+    	\hspace*{-5mm}\begin{tikzpicture}
+    		\node [mybox] (box){%
+    			\begin{minipage}{.70\textwidth}
+    				\centering
+    				\textit{RQ1.4 - In quali fasi di una tipica pipeline di Machine Learning è importante adottare strategie per garantire alti livelli di fairness?}
+    			\end{minipage}
+    		};
+    	\end{tikzpicture}%
+    \end{center}
+    
+    Qualsiasi studio inerente lo stato della pratica che abbia riferimenti di tipo ingegneristico, non può prescindere dall'analizzare aspetti inerenti il ciclo di vita di un determinato target di prodotti software analizzati dall'indagine. In particolare, dall'analisi dei vari modelli di sviluppo standard, come osservato nella sezione di background di questo documento, il modello di sviluppo che si adatta meglio allo sviluppo di soluzioni ML-Intensive è senz'altro l'approccio basato tramite Pipeline di Machine learning, adottato da standard di sviluppo noti, quali il famoso ML-Ops \cite{MLOps}. Considerando le fasi di una canonica pipeline di machine learning (immangine 2.1), il survey propone ai partecipanti all'indagine di chiedere, quanto, secondo la loro esperienza professionale, sia critico adottare strategie specifiche per preservare i livelli di fairness, per ciascuna macro-fase della pipeline (anche per questo quesito si è deciso di formalizzare una scala di valori da 1 - per nulla rilevante a 5 - estremamente importante). In fase di progettazione, si è osservata la presenza di numerosi tool specifici, utili al trattamento della fairness all'interno dello sviluppo ML-Intensive, si è ritenuto interessante quindi, chiedere ai partecipanti quali tool possano essere ampliamente utilizzati per lo sviluppo di soluzioni AI-Intesive fair critical (esempi di tool considerati sono: IBM's AI Fairness 360 e Microsoft Fairlearn). \\
+    
+    \begin{center}
+    	\hspace*{-5mm}\begin{tikzpicture}
+    		\node [mybox] (box){%
+    			\begin{minipage}{.70\textwidth}
+    				\centering
+    				\textit{RQ1.5 - Quanto le compagnie di sviluppo ML-Intensive, sono mature nel trattare il concetto di fairness come un requisito non funzionale?}
+    			\end{minipage}
+    		};
+    	\end{tikzpicture}%
+    \end{center}
+      
+     Per concludere la panoramica di analisi, si è deciso di proporre ai partecipanti all'indagine, un analisi critica circa il livello di maturità della propria azienda nel trattare software fairness all'interno dei propri progetti di sviluppo ML-Intensive. In particolare, facendo riferimento al noto standard di valutazione del livello di maturità aziendale CMM - \emph{Capability Maturity Model} \cite{CMM}, si è deciso di chiedere a che livello di \emph{maturità} i partecipanti all'indagine collocherebbero la propria azienda considerando la seguente scala:
+     
+     \begin{itemize}
+     	\item Livello 0 - l'azienda non tratta software fairness;
+     	\item Livello 1 - L'azienda occasionalmente tratta software fairness, ma i processi a riguardo sono spesso disorganizzati e talvolta caotici;
+     	\item Livello 2 - L'azienda tratta la fairness e i relativi processi sono stabiliti, definiti e documentati;
+     	\item Livello 3 - L'azienda tratta regolarmente la fairness, e il suo sviluppo è gestito tramite processi standard per il management della fairness;
+     	\item Livello 4 - L'azienda tratta regolarmente fairness e il suo monitoraggio e controllo è gestito da processi specifici accompagnati da data collection e analisi;
+     	\item Livello 5 - L'azienda tratta regolarmente feirness e i relativi processi sono costantemente ottimizzati tramite feedback di monitoraggio.
+     \end{itemize}
+ 
+ 	Come osservato, la scala di valutazione riprende i livelli standard di classificazione del CMM, e nell'ottica specifica, ci si pone l'obiettivo di capire quante persone (tra quelle del campione estratto dalla disseminazione del survey), ritengono di lavorare in un contesto dove effettivamente la fairness sia trattata come un requisito non funzionale prioritario in termini crescenti di maturità, che appunto vanno dal trattare sporadicamente i livelli di fairness di un modulo di machine learning sviluppato, fino a trattarla con processi standardizzati (laddove possibile) con particolare attenzione all'ottimizzazione degli stessi.
     
     \section{Design del Survey Empirico}
     \subsection{Struttura e design del Survey}
