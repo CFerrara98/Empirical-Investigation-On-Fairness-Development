@@ -4,7 +4,7 @@ tools
 
 
 frequency <- table(tools)
-typeof(frequency)
+frequency
 
 # Create Data
 data <- data.frame(
