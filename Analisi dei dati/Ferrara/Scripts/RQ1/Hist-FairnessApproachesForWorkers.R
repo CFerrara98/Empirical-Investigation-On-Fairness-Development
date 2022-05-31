@@ -6,7 +6,8 @@ y <- c('Approach 1',
 
 Approach1_frequences <- data.frame(table(RQ1_Fairness_Approaches$`Approach 1`)) 
 Approach1_frequences['percentage'] <- round(Approach1_frequences$Freq / 116 * 100, 0)
-
+Approach1_frequences$percentage[3] <- Approach1_frequences$percentage[3] - 1
+Approach1_frequences['percentage']
 Approach2_frequences <- data.frame(table(RQ1_Fairness_Approaches$`Approach 2`)) 
 Approach2_frequences['percentage'] <- round(Approach2_frequences$Freq / 116 * 100, 0)
 
