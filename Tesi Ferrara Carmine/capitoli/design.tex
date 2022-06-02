@@ -19,7 +19,7 @@
 		\end{tikzpicture}%
 	\end{center}
 	
-	Questo macro quesito, mira a fornire alla ricerca un'overview analitica circa le attuali pratiche lavorative adottate da professionisti (quali Data Scientists o Ingegneri del Software) nello sviluppo di soluzioni ML-Intensive. Per fare ciò si è deciso di scomporre il macro quesito iniziale in 5 sotto obiettivi di ricerca, che in prima istanza guidano la successiva fase di progettazione del survey (per la specifica dei quesiti da proporre agli esperti coinvolti).\\
+	Questo macro quesito, mira a fornire alla ricerca un'overview analitica circa le attuali pratiche lavorative adottate da professionisti (quali Data Scientists o Ingegneri del Software) nello sviluppo di soluzioni ML-Intensive. Per fare ciò si è deciso di scomporre il macro quesito iniziale in 5 sotto obiettivi di ricerca, che in prima istanza guidano la successiva fase di studio empirico.\\
 	
 	\subsection{RQ1.1 - Come definire la fairness in ambito lavorativo}
 	\begin{center}
@@ -45,12 +45,11 @@
 	e tre macro approcci di misurazione, che sono alla base di diverse metriche, come osservato nell'analisi dello stato della pratica:
 	
 	\begin{itemize}
-		\item Approcci basati su probabilità matematica di predizione;
+		\item Approcci basati su probabilità di predizione;
 		\item Approcci basati su similarità matematica degli individui;
 		\item Approcci basati su relazioni causali tra attributi sensibili e risultati.
 	\end{itemize}
-
-	I relativi quesiti del survey, propongono tali approcci in scala e chiedono al singolo partecipante di specificare un valore in scala (da 1 a 5) che permetta di capire quanto un singola sfaccettatura o singolo approccio di misurazione, sia affine alla sua pratica lavorativa. Infine è stata lasciata la possibilità (tramite quesito aperto) di evidenziare approcci o definizioni diverse, affini o meno, a quelle specificate dai quesiti multipli.\\
+	\newpage
 	
 	\subsection{RQ1.2 - Chi si occupa di fairness in ambito lavorativo}
 	\begin{center}
@@ -64,7 +63,7 @@
 		\end{tikzpicture}%
 	\end{center}
 	
-	Fornire un'analisi circa lo status lavorativo in termini di Software Fairness, necessità senz'altro di approfondire quali figure professionali hanno più impatto rispetto ad altre nell'analisi e nello sviluppo di soluzioni ML-Intensive fair-critical. Per rispondere a questo quesito, il Survey includerà uno specifico quesito, che chiederà ai partecipanti all'indagine di specificare quanto figure professionali quali: Data Scientists, Ingegneri del Software, Data Engineer, Project Manager, Analisti, Architect o \emph{Esperti specifici}, abbiano maggior impatto nello sviluppo di soluzioni Fair-Critical. L'impatto di ciascuna figura sarà valutato in scala da 1 a 5 (nessun impatto a impatto molto alto).\\
+	Fornire un'analisi circa lo status lavorativo in termini di Software Fairness, necessità senz'altro di approfondire quali figure professionali hanno più impatto rispetto ad altre nell'analisi e nello sviluppo di soluzioni ML-Intensive fair-critical. Per rispondere a questo quesito, è necessario valutare che livello di impatto figure professionali quali Data Scientists, Ingegneri del Software, Data Engineer, Project Manager, Analisti, Architect o \emph{Esperti specifici}, abbiano maggior impatto nello sviluppo di soluzioni Fair-Critical.\\
 	
 	\subsection{RQ1.3 - Fairness a confronto con altri aspetti non funzionali}
 	\begin{center}
@@ -78,7 +77,7 @@
 		\end{tikzpicture}%
 	\end{center}
 	
-	Considerando che alcuni lavori di ricerca di tipo ingegneristico, suggeriscono di trattare il concetto di software fairness, come un vero e proprio requisito non funzionale prioritario di un sistema ML-Intensive \cite{brun2018software}, si è deciso di chiedere ai partecipanti all'indagine quanto altri aspetti non funzionali, maggiormente riconosciuti dagli standard ingegneristici (modello FURPS+), oppure ampiamente utilizzati nella pratiche di sviluppo di soluzioni ml-intensive, possano essere più o meno rilevanti rispetto il concetto di software fairness. Nell'ottica di formalizzare nel successivo processo di generalizzazione dei risultati dei veri e propri trade-off tra fairness e altri aspetti non funzionali, lo specifico quesito, chiede ai partecipanti di indicare quanto un determinato aspetto non funzionale, possa essere più o meno impattante rispetto la fairness nello sviluppo di soluzioni AI-Intensive. In particolare, il quesito specifico chiede ai partecipanti di confrontare il concetto di Software Fairness, con:
+	Considerando che alcuni lavori di ricerca di tipo ingegneristico suggeriscono di trattare il concetto di software fairness come un vero e proprio requisito non funzionale prioritario di un sistema ML-Intensive \cite{brun2018software}, si è deciso di chiedere ai partecipanti all'indagine quanto altri aspetti non funzionali, maggiormente riconosciuti dagli standard ingegneristici (modello FURPS+), oppure ampiamente utilizzati nella pratiche di sviluppo di soluzioni ml-intensive, possano essere più o meno rilevanti rispetto il concetto di software fairness. Nell'ottica di formalizzare nel successivo processo di generalizzazione dei risultati dei veri e propri trade-off tra fairness e altri aspetti non funzionali. In particolare, il quesito specifico con la successiva fase di investigazione empirica, pone l'obiettivo di confrontare il concetto di Software Fairness, con:
 	
 	\begin{itemize}
 		\item Usabilità;
@@ -91,7 +90,6 @@
 		\item Riusabilità e scalabilità.
 	\end{itemize}
 	
-	Anche per questo quesito è stata formalizzata una scala di valori che va da 1 (Estremamente meno importante del concetto di fairnes) a 5 (Estremamente più importante del concetto di fairness).\\
     
     \subsection{RQ1.4 - Fairness come aspetto integrante di una Pipeline ML}
     	\begin{center}
@@ -105,7 +103,10 @@
     	\end{tikzpicture}%
     \end{center}
     
-    Qualsiasi studio inerente lo stato della pratica che abbia riferimenti di tipo ingegneristico, non può prescindere dall'analizzare aspetti inerenti il ciclo di vita di un determinato target di prodotti software analizzati dall'indagine. In particolare, dall'analisi dei vari modelli di sviluppo standard, come osservato nella sezione di background di questo documento, il modello di sviluppo che si adatta meglio allo sviluppo di soluzioni ML-Intensive è senz'altro l'approccio basato tramite Pipeline di Machine learning, adottato da standard di sviluppo noti, quali il famoso ML-Ops \cite{MLOps}. Considerando le fasi di una canonica pipeline di machine learning (immangine 2.1), il survey propone ai partecipanti all'indagine di chiedere, quanto, secondo la loro esperienza professionale, sia critico adottare strategie specifiche per preservare i livelli di fairness, per ciascuna macro-fase della pipeline (anche per questo quesito si è deciso di formalizzare una scala di valori da 1 - per nulla rilevante a 5 - estremamente importante). In fase di progettazione, si è osservata la presenza di numerosi tool specifici, utili al trattamento della fairness all'interno dello sviluppo ML-Intensive, si è ritenuto interessante quindi, chiedere ai partecipanti quali tool possano essere ampliamente utilizzati per lo sviluppo di soluzioni AI-Intesive fair critical (esempi di tool considerati sono: IBM's AI Fairness 360 e Microsoft Fairlearn). \\
+    Qualsiasi studio inerente lo stato della pratica che abbia riferimenti di tipo ingegneristico, non può prescindere dall'analizzare aspetti inerenti il ciclo di vita di un determinato target di prodotti software analizzati dall'indagine. In particolare, dall'analisi dei vari modelli di sviluppo standard, come osservato nella sezione di background di questo documento, il modello di sviluppo che si adatta meglio allo sviluppo di soluzioni ML-Intensive è senz'altro l'approccio basato tramite Pipeline di Machine learning, adottato da standard di sviluppo noti, quali il famoso ML-Ops \cite{MLOps}. 
+    
+    Considerando quindi le fasi di una canonica pipeline di machine learning (immagine 2.1), quali sono le fasi su cui investire al fine di garantire un alto livello di fairness del sistema?. Partendo da questo quesito, obiettivo della successiva fase empirica, sarà quello di valutare l'utilità di adottare strategie e metodologie atte a preservare i livelli di fairness in ogni fase di sviluppo di un modulo ML-Intensive, così come formalizzate in una tipica Pipeline di machine learning.   
+    
     
     \subsection{RQ1.5 - Fairness e maturità aziendale}
     \begin{center}
@@ -119,7 +120,7 @@
     	\end{tikzpicture}%
     \end{center}
       
-     Per concludere la panoramica di analisi, si è deciso di proporre ai partecipanti all'indagine, un analisi critica circa il livello di maturità della propria azienda nel trattare software fairness all'interno dei propri progetti di sviluppo ML-Intensive. In particolare, facendo riferimento al noto standard di valutazione del livello di maturità aziendale CMM - \emph{Capability Maturity Model} \cite{CMM}, si è deciso di chiedere a che livello di \emph{maturità} i partecipanti all'indagine collocherebbero la propria azienda considerando la seguente scala:
+     Per concludere la panoramica di analisi, si è deciso di proporre ai partecipanti all'indagine, un analisi critica circa il livello di maturità della propria azienda nel trattare software fairness all'interno dei propri progetti di sviluppo ML-Intensive. In particolare, facendo riferimento al noto standard di valutazione del livello di maturità aziendale CMM - \emph{Capability Maturity Model} \cite{CMM}, è stata formalizzata una scala di misura, che permette di valutare a che livello di maturità è possibile classificare una generica azienda di sviluppo che produce Sistemi ML fair critical:
      
      \begin{itemize}
      	\item Livello 0 - l'azienda non tratta software fairness;
@@ -130,10 +131,10 @@
      	\item Livello 5 - L'azienda tratta regolarmente feirness e i relativi processi sono costantemente ottimizzati tramite feedback di monitoraggio.
      \end{itemize}
  
- 	Come osservato, la scala di valutazione riprende i livelli standard di classificazione del CMM, e nell'ottica specifica, ci si pone l'obiettivo di capire quante persone (tra quelle del campione estratto dalla disseminazione del survey), ritengono di lavorare in un contesto dove effettivamente la fairness sia trattata come un requisito non funzionale prioritario in termini crescenti di maturità, che appunto vanno dal trattare sporadicamente i livelli di fairness di un modulo di machine learning sviluppato, fino a trattarla con processi standardizzati (laddove possibile) con particolare attenzione all'ottimizzazione degli stessi.
+ 	Come osservato, la scala di valutazione riprende i livelli standard di classificazione del CMM, e nell'ottica specifica, ci si pone l'obiettivo di capire quante aziende, (tra quelle coinvolte nella successiva fase di investigazione empirica), ritengono di lavorare in un contesto dove effettivamente la fairness sia trattata come un requisito non funzionale prioritario in termini crescenti di maturità, che appunto vanno dal trattare sporadicamente i livelli di fairness di un modulo di machine learning sviluppato, fino a trattarla con processi standardizzati (laddove possibile) con particolare attenzione all'ottimizzazione degli stessi.
     
     \section{Metodologia di ricerca}
-     Al fine di ottenere contenuti informativi utili a rispondere agli obiettivi di ricerca formalizzati, si è deciso di è stato deciso di progettare la fase di raccolta dati per mezzo di un Survey da sottoporre ad esperti del dominio.
+     Al fine di ottenere contenuti informativi utili a rispondere agli obiettivi di ricerca formalizzati, si è deciso di è stato deciso di progettare la fase di raccolta dati per mezzo di un Survey da sottoporre ad esperti del dominio.\\\\
      
     \textbf{Perché un Survey di ricerca?}\\
     Progettare un Survey di ricerca che indaghi sullo status della pratica dello sviluppo si sistemi di machine learning fair, può avere un duplice vantaggio: innanzitutto interpellare esperti del dominio è un qualcosa che indirizzerà le future attività di ricerca verso la progettazione di strumentazioni e strategie che realmente possano rispecchiare le necessità di chi quotidianamente lavora nel mondo del machine learning secondo vincoli etici sempre più stringenti, oltretutto fornire un overview iniziale delle pratiche più utilizzate può essere sicuramente d'aiuto anche agli esperti dell'ambito nel definire processi standard per trattare la fairness come altri aspetti di qualità già più sistematizzati.
@@ -165,8 +166,6 @@
     
    \subsubsection{Introduzione del Survey}
    Prima ancora di cominciare con la  compilazione del Survey, si introduce velocemente il partecipante alla problematica di ricerca connessa alla software Fairness nei sistemi AI-Intensive, fornendo anche un piccolo esempio pratico, tra quelli definiti nel capitolo stato dell'arte. Volutamente non si fornisce già all'inizio una caratterizzazione mirata del concetto, dato che è scopo dell'indagine capire se il concetto di Fairness e di Fair Bias, sia approcciato in ambito lavorativo in maniera similare rispetto a quanto formalizzato in letteratura. Inoltre viene fornita qualche informazione circa i conduttori dell'indagine empirica e sul trattamento dei dati raccolti. 
-   
-   
    
    \subsubsection{Background del partecipante}
    La prima sezione è mirata ad acquisire informazioni circa il background dei partecipanti, al fine di poter suddividere e manipolare successivamente le risposte al questionario sulla base delle informazioni sociali, culturali, lavorative dei partecipanti. La sezione è strutturata in modo tale da ricevere informazioni circa informazioni anagrafiche e etniche del partecipante, lo status lavorativo del partecipante, la sua esperienza lavorativa circa lo sviluppo e la realizzazione di sistemi ML-Intensive. Di seguito viene riportata una tabella riassuntiva della sezione con tutte le domande poste circa il background del partecipante.\\
@@ -511,7 +510,6 @@ Hai mai lavorato allo sviluppo di soluzioni AI-Intensive o a sistemi che includo
     \begin{itemize}
         \item Conoscenza fluente dell'inglese;
         \item Settore lavorativo: Informatica, Tecnologia, Ingegneria...;
-        \item Settore Lavorativo: Informatica, Scienze, Tecnologia, Ingegneria e Matematica;
         \item Completamento di un alto livello di studi: Diploma o superiori.
     \end{itemize}
     
@@ -525,14 +523,14 @@ Hai mai lavorato allo sviluppo di soluzioni AI-Intensive o a sistemi che includo
     
     \subsubsection{Chiusura del survey}
     A seguito della ricezione di un totale di 203 risposte, in data 16/05/2022, tramite il link disponibile su prolific, si è osservato che il materiale a disposizione potesse essere più che disponibile al fine di procedere con le successive fasi di Data Cleaning, analisi e generalizzazione dei risultati, quindi si è deciso di terminare la fase di ricezione di risposte in tale data al fine di procedere con i successivi passaggi di studio.\\
-    In particolare, si osserva come il survey realizzato e pubblicato sulla piattaforma Prolific, abbia ottenuto un totale di 203 risposte. Il dataset originale, senza attività di data cleaning e post processing, risulta disponibile al seguente link: \url{https://tinyurl.com/FairAnalysisOriginalDataset}. Il Survey pubblicizzato tramite piattaforma Linkedin, invece, ha prodotto soltanto 2 risposte entrambe poco utili ai fini dell'analisi, perchè ricevute da figure professionali non affini al mondo dell'intelligenza artificiale, per tale ragione, si è deciso di non considerare questo contributo per la successiva fase di Data Analysis.
+    In particolare, si osserva come il survey realizzato e pubblicato sulla piattaforma Prolific, abbia ottenuto un totale di 203 risposte. Il Survey pubblicizzato tramite piattaforma Linkedin, invece, ha prodotto soltanto 2 risposte entrambe poco utili ai fini dell'analisi, perchè ricevute da figure professionali non affini al mondo dell'intelligenza artificiale, per tale ragione, si è deciso di non considerare questo contributo per la successiva fase di Data Analysis.
     
     \subsection{Considerazioni Etiche}
     
     Considerando le norme vigenti in Italia, è strettamente necessario porre alcune considerazioni etiche.
     Dato che il questionario considera l'introduzione di figure terze è stato chiarito fin da subito che:
     \begin{itemize}
-        \item  Il partecipante sarà invitato a rilasciare informazioni che potrebbero essere soggette a vincoli di riservatezza aziendale, Di conseguenza si rammenta che la compilazione può essere abbandonata in qualsiasi momento prima della sottomissione;
+        \item  Il partecipante sarà invitato a rilasciare informazioni che potrebbero essere soggette a vincoli di riservatezza aziendale, di conseguenza si rammenta che la compilazione può essere abbandonata in qualsiasi momento prima della sottomissione;
         \item Sarà garantito il rispetto della privacy, evitando di utilizzare le informazioni rilasciate, se non per gli scopi stessi stabiliti nella sezione introduttiva, e in ogni caso anonimizzando  riferimenti diretti a dati sensibili nella rielaborazione e generalizzazione dei dati ottenuti;
         \item Il partecipante non vorrà comunicare tutti o alcuni dei dati sensibili richiesti, è stata prevista un opzione di risposta apposita, \emph{Preferisco non comunicarlo}, che appunto consentirà al partecipante di restare neutrale circa la specifica informazione richiesta.
         \item A seguito del test pilota e prima della diffusione del survey su larga scala, è stato deciso di rendere non obbligatorie domande circa dati sensibili di carattere sociali quali sesso o etnia, per maggiori dettagli si rimanda alla sezione \textbf{Validazione del Survey};
@@ -540,6 +538,12 @@ Hai mai lavorato allo sviluppo di soluzioni AI-Intensive o a sistemi che includo
     
     Qualora i partecipanti siano interessati ai futuri sviluppi dell'indagini, essi potranno in maniera facoltativa rilasciare la propria mail per ottenere un overview dei risultai e/o essere ricontattati per futuri approfondimenti. I partecipanti inoltre nella sezione di chiusura sono lasciati liberi di rilasciare qualsiasi informazione aggiuntiva che ritengano rilevante ai fini dell'indagine tramite apposito quesito aperto facoltativo.
     
+    
+    \begin{wrapfigure}{l}{1\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{figure/Survey Structural diagram.png}
+        \caption{Diagramma di riepilogo della strutturazione del survey}
+    \end{wrapfigure}
    
 
 \newpage
