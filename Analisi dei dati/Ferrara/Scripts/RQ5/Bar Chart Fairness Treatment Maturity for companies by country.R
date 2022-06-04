@@ -20,7 +20,7 @@ fig <- fig %>% add_trace(y = ~level4, name = 'Level 4')
 fig <- fig %>% add_trace(y = ~level5, name = 'Level 5')
 
 fig <- fig %>% layout(title = "Fairness treatment maturity model by country",
-                      xaxis = list(title = "Partecipants Country"),
-                      yaxis = list(title = "Partecipants"), barmode = 'stack')
+                      xaxis = list(title = "Participants Country"),
+                      yaxis = list(title = "Participants"), barmode = 'stack')
 fig
 
