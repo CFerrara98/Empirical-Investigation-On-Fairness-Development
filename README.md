@@ -30,8 +30,6 @@ Lavoro di tesi che a seguito dell'analisi iniziale, si pone l'obiettivo di racco
 quelle secondo i professionisiti possono essere Root Causes di discriminazione in un modulo di machine learning e di Bad e Bast Practices 
 nel trattamento di Software Fairness nello sviluppo di moduli di Machine Learning.
 
---- FORNIRE MAGGIORI DETTAGLI SUGLI OBIETTIVI DI RICERCA ---
-
 -- L'analisi empirica inerente l'analisi di cause di discriminazione e di Best & Bad Practices 
 è stata oggetto di studio di Francesco Abate: https://github.com/frekkanzer2 --
 
