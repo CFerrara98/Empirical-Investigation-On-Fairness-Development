@@ -6,7 +6,7 @@ venga effettivamente applicato in contesti aziendali di sviluppo ML-Intensive!
 --------------------------------------------------------------------------------------------------------------------------------------
 Il lavoro complessivo si articola in due differenti elaborati di tesi che pongono in analisi 2 aspetti cardine di investigazione:
 
-#Machine Learning Fairness: Analisi empirica dello stato della pratica!
+# Machine Learning Fairness: Analisi empirica dello stato della pratica!
 
 Lavoro esplorativo iniziale, che mira ad offire una panoramica generale rispetto ad un primo grande quesito di ricerca, ovvero:
 In che modo il concetto di Software Fairness è attualmente percepito nell'ambiente lavorativo ML-Intensive?
@@ -37,3 +37,9 @@ nel trattamento di Software Fairness nello sviluppo di moduli di Machine Learnin
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------
+# Metodologia di Studi: Survey su larga scala
+
+Per la raccolta dati di entrambi gli studi è stato utilizzato un Survey Google form con quesiti mirati e direttamente riconducibili 
+agli obiettivi di ricerca, ne segue un diagramma riassuntivo!
+
+<p align="center"><img src="./Diagrammi/Survey Structural diagram.png" /></p>
