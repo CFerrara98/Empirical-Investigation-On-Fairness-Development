@@ -1,6 +1,6 @@
 # TesiFairness
 
-Progetto di tesi realizzato al fine di condurre un'analisi empirica che mira a verificare se e come il trattamento di Software Fairness 
+Progetto di tesi realizzato al fine di condurre un'analisi empirica che mira a verificare se e come il trattamento di Software Fairness
 venga effettivamente applicato in contesti aziendali di sviluppo ML-Intensive!
 
 --------------------------------------------------------------------------------------------------------------------------------------
@@ -27,17 +27,17 @@ una visione attuale e il più possibile dettagliata circa il trattamento di Soft
 
 # Machine Learning Fairness: Definizione di un Catalogo di Pattern e Anti-Pattern
 Lavoro di tesi che a seguito dell'analisi iniziale, si pone l'obiettivo di raccogliere in maniera sistematica ed organizzata,
-quelle secondo i professionisiti possono essere Root Causes di discriminazione in un modulo di machine learning e di Bad e Bast Practices 
+quelle secondo i professionisiti possono essere Root Causes di discriminazione in un modulo di machine learning e di Bad e Bast Practices
 nel trattamento di Software Fairness nello sviluppo di moduli di Machine Learning.
 
--- L'analisi empirica inerente l'analisi di cause di discriminazione e di Best & Bad Practices 
+-- L'analisi empirica inerente l'analisi di cause di discriminazione e di Best & Bad Practices
 è stata oggetto di studio di Francesco Abate: https://github.com/frekkanzer2 --
 
-
+-- Il materiale inerente è disponibile al seguente link: https://github.com/frekkanzer2/Fairness-Practices-Catalog --
 ---------------------------------------------------------------------------------------------------------------------------------------
 # Metodologia di Studi: Survey su larga scala
 
-Per la raccolta dati di entrambi gli studi è stato utilizzato un Survey Google form con quesiti mirati e direttamente riconducibili 
+Per la raccolta dati di entrambi gli studi è stato utilizzato un Survey Google form con quesiti mirati e direttamente riconducibili
 agli obiettivi di ricerca, ne segue un diagramma riassuntivo!
 
 <p align="center"><img src="./Diagrammi/Survey Structural diagram.png" /></p>
